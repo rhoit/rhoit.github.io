@@ -1,0 +1,148 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>presentation | Opinion Mining | by rho@<Rhoit Man Amatya></title>
+    <meta name="description" content="Optinion Mining" />
+    <meta name="author" content="Rhoit" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+    <div id="main" align="center" class="step" data-x="0" data-y="0" data-scale=".5">
+        <q><b>Polarity</b> and <b>Strength</b> of<br>
+	  <b>Opinion</b> in<br>
+	  <b>Newspaper Editorials</b></q>
+	<div style="font-size:15px;" align="center">
+	  <b>2013 March 24</b>
+	</div>
+
+	<div align="left" style="margin-top:100px;" >
+	  <img src="http://upload.wikimedia.org/wikipedia/en/c/cb/Kathmandu_University_Logo.svg" width="120px" align="right">
+	  <div style="margin-bottom: 0px; font-size:30px; padding-top:25px;">
+	    &nbsp; <b>Presenter</b>&nbsp;&nbsp;&nbsp; Rohit Man Amatya<br>
+	    &nbsp; <b>Supervisor</b>&nbsp; Bal Krishna Bal
+	  </div>
+	</div>
+    </div>
+
+    <div class="step slide" data-x="0" data-y="800">
+      <br>
+      <br>
+      Unlike the traditional data-mining!
+      <div align="center">
+	<font color="black">
+	<q>Extracting subjective information from source materials is the challenging task!</q>
+	</font>
+      </div>
+      <br>
+      <br>
+      <div align="right">
+	this known the <font color="black"><b>Opinion Mining</b></black>
+      </div>
+    </div>
+
+    <div class="step slide" data-x="1000" data-y="800">
+      <q><font color="black">This can be really useful in </font>
+       <div align="left" style="margin-left:85px">
+	 <li> knowing what other <font color="black">thinks</font>
+	 <li> <font color="black">Summarizing</font> Content
+	 <li> market <font color="black">analysis</font>
+     </div></q>
+    </div>
+
+    <div align="center" class="step slide" data-x="1000" data-y="0">
+      <q><font color="black">Challenges in Opinion Detection</font>
+      <div align="left" style="margin-left:85px">
+	<li> <b>comparison</b>
+	<li> opinion <b>holder</b>
+	<li> detection of the <b>target</b>
+	<li> <b>negation</b> handling
+	<li> change over <b>time</b>
+      </div>
+      </q>
+    </div>
+
+    <div class="step slide" align="center" data-x="1000" data-y="-800">
+      <font color="black">Current Design</font>
+      <br>
+      <br>
+      <br>      
+      <img src="fig/flow.svg" width="100%"><br>
+      <div align="right">
+	* Hu and Liu, KDD-2004<br>
+	** Riloff and Wiebe, 2003
+      </div>
+    </div>
+
+
+    <div class="step slide" align="center" data-x="0" data-y="-800" >
+      <font color="black">Editorials extracted over 2007-2012</font>
+      <img src="graphs/editorials.svg">
+    </div>
+
+    <div class="step" data-x="-55" data-y="-590" data-rotate-z="-90" data-scale=".3">
+      <img src="logo/Aljazeera.svg" align="left">
+    </div>
+
+    <div class="step" data-x="-55" data-y="-634", data-rotate-z="-90" data-scale=".1">
+      <img src="graphs/people.png" align="left">
+      <img src="graphs/political.png" align="left">
+    </div>
+    
+    <div class="step slide" align="center" data-x="-1000" data-y="-800">
+      <font color="black">Annotation Tool</font>
+      <br>
+      <br>
+      <img src="img/antool.png" width="100%">   
+
+    </div>
+
+    <div class="step slide" align="center" data-x="-1000" data-y="0">
+      <font color="black">Future Plan</font>
+      <br>
+      <br>
+      <img src="graphs/geo.png" width="100%">
+    </div>
+
+    <div class="step slide" data-x="-1000" data-y="800">
+      <q><font color="black"> Future Plans...
+	<div align="left" style="margin-left:85px">
+	  <li> Popular <b>Event</b> analysis
+	  <li> Political figures
+	  <li> Visualization
+	  <li> Opinion Time-line
+	</div>
+	</font>
+      </q>
+
+    </div>
+
+
+    <div id="overview" class="step" data-x="0" data-y="0" data-scale="3.2">
+    </div>
+
+</div>
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+</html>
