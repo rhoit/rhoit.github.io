@@ -1,0 +1,36 @@
+# git(hub/foss-np/${projects})
+
+* Questions:
+
+1. Do You Code? I mean write programs?
+2. Can't find, What you are looking for?
+3. Existing Implimentation sucks?
+
+* मास्स्टर पिलान
+** intro
+*** kickstart
+
+- Installing GIT
+
+debian base systems:
+#+begin_src shell
+$ sudo apt-get install git-core git-cola git-sh
+#+end_src
+
+Tip: Configure you shell
+#+begin_src shell
+$ git clone http://github.com/rhoit/my-config
+#+end_src
+
+- tip: using gist!
+
+** git basic
+
+** git beyond basic
+
+* FOSS Community Project
+** beginning
+
+# python dev meet 101
+
+* FAQ
