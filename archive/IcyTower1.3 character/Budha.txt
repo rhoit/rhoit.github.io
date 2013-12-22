@@ -1,0 +1,21 @@
+Template character for Icy Tower.
+Have fun!
+
+# graphics
+[frames] 		BBudha.bmp
+	
+# sound
+[jumplo] 		Audio\Boink.wav 
+[jumpmed] 		Audio\Boink.wav
+[jumphi]	 	Audio\Hooray.wav  
+[pause] 	 	Audio\pause.wav
+[death]			Audio\Death.wav  
+[greeting]		Audio\Ready.wav   
+[edge]			Audio\Aah.wav
+
+
+
+	
+
+
+
