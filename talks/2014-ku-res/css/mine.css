@@ -1,0 +1,73 @@
+span.amp {
+    font-family:  Palatino, serif;
+    font-style: italic;
+    font-weight: normal;
+}
+
+span.ne_chalk {
+    font-family: 'Ananda Akchyar', serif;
+    font-weight: 'bold';
+    color: #ffffff;
+}
+
+p.chalk_board {
+    color: #ffffff;
+    padding: 45px 0px;
+    margin: 25px 30px;
+    font-family: 'DK Crayon Crumble';
+    font-size: 70px;
+    font-style: italic;
+    border: 0px solid black;
+    box-shadow: 8px 8px 5px #888888;
+    background-image: url('../texture/board.jpg');
+}
+
+span.chalk {
+    font-family: 'DK Crayon Crumble', serif;
+    font-weight: 'bold';
+    color: #ffffff;
+}
+
+
+.reveal section code.bash { /* TODO: bash*/
+    font-size:125%;
+    line-height:125%;
+}
+
+.reveal section img {
+    border:0px;
+    background:none;
+    box-shadow:none;
+}
+
+.reveal section h2 {
+    /* line-height:120%; */
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+
+section.back {
+  background: #1c1e20;
+  background: -moz-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555a5f), color-stop(100%, #1c1e20));
+  background: -webkit-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -o-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -ms-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background-color: #2b2b2b; }
+
+
+h1.OpenwebIcons {
+    font-family: 'Openweb Icons';
+    src: url(fonts/openwebicons.ttf);
+}
+
+@font-face {
+    font-family: Openweb;
+    src: url(fonts/openwebicons.ttf);
+}
+
+#icon {
+    font-family: Openweb, serif;
+}

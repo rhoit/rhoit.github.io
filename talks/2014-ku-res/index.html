@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Opinion Mining by @rho</title>
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="rho">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/serif.css" id="theme">
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <link rel="stylesheet" href="css/mine.css">
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h3 style="font-size:105px">Detecting Opinion</h1>
+                        <h1 style="font-size:85px">Polarity <span class="amp">&</span> Intensity</h1>
+                        <h3 style="font-size:65px">in Newspaper Texts</h1>
+                            <div style="font-family:'Sawasdee'; width:100%">
+                                <small style="padding:35px 0px; width:100%; font-weight:bold">
+                                    2014 Feb 14</small>
+                                <div style="float:right; width:30%;">
+                                    <img src="logo/KU.svg" width="140px" align="right" style="background:none; box-shadow:none; border:0px">
+                                </div>
+                                <div style="float:left; width:70%; font-size:30px; padding-top:45px" align="left">
+                                    <div style="float:left; width:55%; font-weight:bold">
+                                        MS by Research Candidate<br>Supervisor
+                                    </div>
+                                    <div style="float:left; width:45%">
+                                        Rohit Man Amatya<br>Bal Krishna Bal
+                                    </div>
+                                </div>
+                            </div>
+                </section>
+
+                <section style="">
+                    <section style="">
+                        <h2>1. Introduction</h2>
+                        <p align="left" style="font-family:'Sawasdee'; font-size:45px">
+                            Unlike the data-mining!</p>
+                        <p class="chalk_board">
+                            Extracting Subjective Information</p>
+                        <p align="right" style="font-size:45px">
+                            is an <b>Opinion Mining...</b>
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>What is<br><span style="padding-left:80px">Polarity <span class="amp">&</span> Intensity?</span></h2>
+                        <img src="img/visualization.png" style="background:none; box-shadow:none; width:40%; margin-top:-50px"><br>
+                        <!-- <p> with examples</p> -->
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2 >2. Problem Definition</h2>
+                        <img src="fig/om.png" style="background:none; box-shadow:none; border:0px; margin:-40px 0px 0px -80px">
+                    </section>
+
+                    <!-- <section data-transition="fade"> -->
+                    <!--   Analyze the opinion polarity and intensity of the text -->
+                    <!--   <p> in document level</p> -->
+                    <!-- </section> -->
+
+                    <section>
+                        <h2>2.1 Significance</h2>
+                        <ul style="width:100%">
+                            <li>Applications
+                                <ul>
+                                    <li> market review of products
+                                        <li> public opinion
+                                </ul>
+                                <li> <b>Visualize</b> data
+                                    <li> Exploring <b>Data</b>
+                                        <li> Finding <b>interesting</b> Results
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>3. Motivation</h2>
+                        <ul style="width:100%">
+                            <li> Is a <b>Difficult Task</b>
+                                <li> Existing Research focused on word/phrase level
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>3.1 A Difficult Task</h2>
+                        <img src="img/flipper.png" style="background:none; box-shadow:none; margin-top:0px; width:100%">
+                    </section>
+
+                    <section>
+                        <h2>3.1 Challenges</h2>
+                        <ul style="width:100%">
+                            <li> Context & Domain Dependent
+                                <li> Detection Accuracy
+                                    <li> <!-- Before Analyzing in the document level, we need to analysis word/phrase, sentence level -->
+                                        <!-- the data might not reflect the actual --> Accurate polarity is hard to achive with higher levels
+                                        <li> Huge data and Computation Cost.
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>4. Proposed Solution</h2>
+                    <img src="fig/flow.svg" width="100%" style="background:none; box-shadow:none; border:0px">
+                </section>
+
+                <section>
+                    <section>
+                        <h2>5. Research Work</h2>
+                        <img src="graphs/polarity.svg" width="100%" style="margin-top:-20px">
+                    </section>
+
+                    <section>
+                        <h2>5.1 Checklist</h2>
+                        <ul style="width:100%">
+                            <li> Workable Prototype
+                                <ul>
+                                    <li> Web Crawler <span style="font-family:'Sawasdee'" >[ 2012 Sep — 2013 Jul ]</span><span class="fragment" align="right" style="color:green">✓</span>
+                                        <li> Segmentation <span style="font-family:'Sawasdee'">[ 2012 Dec — Present ]</span><span class="fragment" align="right" style="color:green">✓</span>
+                                            <li> autotool <span style="font-family:'Sawasdee'">[ 2012 Dec — Present ]</span><span class="fragment" align="right" style="color:green">✓</span>
+                                                <li> angui <span style="font-family:'Sawasdee'">[ 2013 Apr — Present ]</span><span class="fragment" align="right" style="color:green">✓</span>
+                                </ul>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>5.1 Checklist...</h2>
+                        <ul style="width:100%">
+                            <li> Performance Analysis
+                                <ul>
+                                    <li> Specified Crawler <span class="fragment" align="right" style="color:green">✓</span>
+                                        <li> Segmentation 10× nltk <span class="fragment" align="right" style="color:green">✓</span>
+                                </ul>
+                                <li> Visualization
+                                    <ul>
+                                        <li> Plotting <span class="fragment" align="right" style="color:green">✓</span>
+                                            <li> Geo-mapping <span class="fragment" align="right" style="color:red">✗</span>
+                                    </ul>
+                                    <li> POS tag integration <span class="fragment" align="right" style="color:red">✗</span>
+                                        <li> Machine Learning <span class="fragment" align="right" style="color:red">✗</span>
+                                            <li> Paper Presentation in LSN <span style="font-family:'Sawasdee'">[ 2013 Nov ]</span>
+                                                <span class="fragment" align="right" style="color:green">✓</span>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>6. Research Outcomes</h2>
+                        <img src="img/angui.png" width="100%" style="background:none; box-shadow:none; border:0px; margin-top:0px">
+                    </section>
+
+                    <section>
+                        <h2>6.1 Data Scrapping</h2>
+                        <img src="graphs/source.svg" width=80% style="background:none; box-shadow:none; border:0px; margin-top:-80px">
+                    </section>
+
+                    <section>
+                        <h2>6.2 New Tagging Method</h2>
+                        <pre><code class="bash" style="font-size:125%; line-height:125%">#./main.py ../../data/editorials/samples/flip.txt
+[34;1;301mFlipper test[0m
+[34;1;302mRho[0m
+[34;1;303m2013/05/20[0m
+[34;1;304mcollected text[0m
+
+[38;5;245;1;349m0.0 [0mThe cinema was [32;453mgood[0m.[38;5;10;1;353m{1.0/1}[0m
+[38;5;245;1;349m1.0 [0mThe cinema was [48;5;172;401mnot[0m [32;9;453mgood[0m.[38;5;9;1;351m{-1.0/1}[0m
+[38;5;245;1;349m2.0 [0mThe [31;451mplot[0m of the cinema was [32;453mgood[0m [34;503;504mbut[0m the actors did [48;5;172;401mnot[0m perform [32;9;453msatisfactorily[0m.[38;5;9;1;351m{-1.0/3}[0m
+[38;5;245;1;349m3.0 [0mMy [31;451mpain[0m has disappeard [34;507;506mafter[0m taking the drug.[38;5;9;1;351m{-1.0/1}[0m
+[38;5;245;1;349m4.0 [0m[48;5;172;401mnot[0m [35;501;522;551;403mso[0m [32;9;1;453mgood[0m some thing [48;5;172;401mnot[0m [35;402mquite[0m [32;9;3;453mgood[0m [38;5;9;1;351m{-2.5/2}[0m
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>6.3 GUI article Manager</h2>
+                        <img src="fig/source.svg" width=100% style="margin-top:0px">
+                        <h3>10,000+ articles</h3>
+                    </section>
+
+                    <section>
+                        <h2>6.4 Visualization</h2>
+                        <img src="graphs/time.svg" width=100% style="border:0px; margin-top:0px">
+                    </section>
+
+                    <section>
+                        <h2>6.4 Visualization...</h2>
+                        <img src="graphs/geo.png" width=100% style="margin-top:0px">
+                    </section>
+
+                    <section>
+                        <h2>6.4 Visualization...</h2>
+                        <img src="graphs/arab.png" width=90% style="margin-top:30px; float:left">
+
+                        <img src="logo/wiki.svg" width=40% style="margin-top:-655px; float:left">
+                    </section>
+
+                    <section>
+                        <h2>6.5 Features</h2>
+                        <ul style="width:100%">
+                            <li> Specified Crawler
+                                <li> New Tagging Style
+                                    <li> GUI article manager
+                                        <li> Visualization
+                                            <li> Supports नेपाली
+                                                <li> Fast »
+                        </ul>
+                    </section>
+
+                </section>
+
+                <section>
+                    <h2>7. Future Work</h2>
+                    <ul style="width:100%">
+                        <li> Improving Accuracy of the System
+                            <li> keyword <b>search</b> through <b>time</b>
+                                <li> entity lock <b>event & trend</b> analysis
+                                    <li> Machine learning
+                    </ul>
+                </section>
+
+                <section>
+                    <h1><small>Queries ?</small><br>Thank You!</h1>
+                </section>
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+        </script>
+    </body>
+</html>
