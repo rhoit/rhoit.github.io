@@ -1,0 +1,3 @@
+$ git init [-q | --quiet] [--bare] [--template=&lt;template_directory&gt;]
+>   [--separate-git-dir &lt;git dir&gt;]
+>   [--shared[=&lt;permissions&gt;]] [directory]

@@ -1,0 +1,8 @@
+$ git config --list
+user.name=rho
+user.email=rho.rhoit@gmail.com
+github.user=rhoit
+github.gist-oauth-token=aa26d6a049576d3f73e4a4302fc42
+core.editor=mg
+color.ui=true
+push.default=simple

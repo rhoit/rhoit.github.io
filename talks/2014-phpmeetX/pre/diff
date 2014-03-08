@@ -1,0 +1,4 @@
+# compare files line by line
+$ diff [OPTION]... FILES
+# apply a diff file to an original
+$ patch [options] [originalfile] [patchfile]

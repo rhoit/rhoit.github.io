@@ -1,0 +1,739 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>git(hub/*/*)?</title>
+    <meta name="git" content="presentations">
+    <meta name="author" content="rho">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/serif.css" id="theme">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/mine.css">
+    <link rel="stylesheet" href="font/webfonts/stylesheet.css">
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+	<section id="home">
+	  <h1>&nbsp;&nbsp;&nbsp;git(hub/<br>php-meet/*)?</h1>
+	  <h3><a href="?#/notodo">
+	      not so basic »</a></h3>
+	  <p><small>based on <b>
+		<a href="http://git-scm.com/">git</a>
+		<a href="https://github.com/git/git/releases">version</a>
+		<a href="https://github.com/git/git/blob/5f95c9f850b19b368c43ae399cc831b17a26a5ac/Documentation/RelNotes/1.9.0.txt">
+		  1.9.0</a></b></small></p>
+	  <p><small>
+              Made using <b><a href="https://github.com/hakimel/reveal.js">reveal.js</a></b><br>
+              <a href="?#">Default</a> -
+              <a href="?theme=sky">Sky</a> -
+              <a href="?theme=beige">Beige</a> -
+              <a href="?theme=simple">Simple</a> -
+              <a href="?theme=serif">Serif</a> -
+              <a href="?theme=night">Night</a> <br>
+              <a href="?theme=moon.css">Moon</a> -
+              <a href="?theme=simple.css">Simple</a> -
+              <a href="?theme=solarized.css">Solarized</a>
+	  </small><p>
+	</section>
+
+	<section>
+	  <!-- for starter who don't know what we are talking about -->
+	  <section data-background="img/texture/board.jpg" data-background-repeat="repeat" data-background-size="92px">
+            <a href="http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1">
+              <img src="img/gitchalk.png" style="background:none; box-shadow:none" height=350px>
+            </a>
+            <h2 class="nep" style="color:#fff">eGgfn]</h2>
+            <p id="chalk" style="font-size:45px">
+		<span>open source</span>, <!-- need help dunno why this is not animating -->
+		<span>distributed</span>
+		version control system designed for
+		<span>speed</span>
+		and efficiency
+            </p>
+	  </section>
+
+          <section data-transition="zoom">
+            <h2>¡ Kick Start «</h2><hr>
+            <p style="text-align:left">Unix Based</p>
+            <pre><code class="bash" id="install"></code></pre>
+            <p style="text-align:left">MS Windows</p>
+	    <blockquote style="text-align:left">
+	      <b>Native&nbsp;&nbsp;</b> -
+	      <a href="http://www.git-scm.com/download/win">
+		git from git-scm.com</a><br>
+	      <b>Cygwin</b> -
+	      <a href="http://msysgit.github.io/">
+		mysysgit
+	      </a>
+            </blockquote>
+          </section>
+	</section>
+
+	<section>
+	  <section>
+              <h2 class='nep'>s] tkfO{ ...</h2>
+            <img src="img/meme/question.jpg" style="border:4px solid black;">
+            <h1>Code <span class='nep'>ug{'x'G5 M</span></h1>
+            <aside class="notes">
+              Ask Them
+            </aside>
+	  </section>
+
+	  <section>
+            <h1>Code for ...</h1>
+            <h3>Assignment &gt; Job &gt; Project &gt; Fun</h3>
+	  </section>
+	</section>
+
+	<section>
+	  <section>
+            <h1>Problem…</h1>
+            <div style="width:100%; margin:0;">
+              <div style="float:left;width:50%;"><img src="img/gif/burn.gif" width=100% style="border:4px solid black;"></div>
+              <div style="float:right;width:50%;">
+		<ul style="margin:20px 0px 0px 80px; line-height:120%; font-size:55px; width:100%">
+                    <li class="nep"> vf]h]sf] kfOPg
+                    <li class="fragment"> <span class="nep">e]6] klg </span>#!@
+                    <li class="fragment nep"> slt <b>7&quot;nf]</b>
+                    <li class="fragment"> <b>git</b>
+                    <span class="nep"> df /x]5 .</span>
+                    </li>
+		</ul>
+	      </div>
+            </div>
+	  </section>
+	</section>
+
+	<section>
+	  <!-- zoom movement frame by frame of the comic strip -->
+	  <!-- y u no, splash. posting "Y"..(.2s).."U"..(.2s).."NO"..(.2s).."src ctrl manager" -->
+          <section style="margin-top:-25px">
+              <a href="http://www.phdcomics.com/comics/archive.php?comicid=1531">
+	      	<img src="img/phd.jpg" style=""></a>
+          </section>
+
+          <section>
+	    <!-- <img src="img/yuno.png" style=""> -->
+            <img src="img/meme/scm.jpe" style="border:4px solid black;">
+            <h3>SVN, CVS, Bazzar,<br>Mercurial, Bitkeeper</h3>
+          </section>
+
+          <section>
+            <h1>What is SCM?</h1>
+            <h2 style="text-align:right;">before that… </h2>
+          </section>
+	</section>
+
+	<section id="history">
+          <section>
+	    <h3 style="text-align:left;">Bit, small</h3>
+            <h1>Story of<br>
+	      Collaboration</h1>
+          </section>
+          <section>
+            <h2 style="margin-bottom:35px">Rise of the</h2>
+	    <img src="img/boy.png" id="plain">
+	    <img src="img/girl.png" id="plain">
+	    <img src="img/binary.png" id="plain">
+	    <img src="img/coder.png" id="plain">
+	    <img src="img/woman.png" id="plain">
+	    <h2 style="margin-top:35px"><b>Software Industries</b></h2>
+          </section>
+          <section>
+	    <h2>Centralized Version Control</h2>
+	    <img src="img/centralized-vc.png" id="plain" width=80%>
+	    <aside class="notes">
+	      Growth in number, help from developer for overight each
+	      other changes.
+	    </aside>
+          </section>
+	</section>
+
+	<section>
+          <section data-transition="zoom">
+	    <h1>Diff <span class="amp">&</span>  Patch</h1>
+            <img src="img/patch.jpg" style="border:4px solid black;">
+            <pre><code class="bash" id="diff"></code></pre>
+          </section>
+
+          <section>
+            <h2 style="margin-top:0px">Internet</h2>
+	    <img src="img/internet.png" id="plain" width=80%>
+          </section>
+
+          <section>
+            <h2 style="text-align:left">open-src chaos</h2>
+	    <h1>Co-operation</h1>
+	    <h3 style="margin-top:50px">without</h3>
+	    <h1>Co-ordination</h1>
+            <!--   looking like the org chart -->
+            <!--   can edit only subsection -->
+            <!--   really gud model for the software industry -->
+          </section>
+
+          <section>
+            <h1>Mails</h1>
+            <img src="img/meme/noway.jpg" style="border:4px solid black;" height=250px>
+          </section>
+
+          <section>
+            <h2>CODE Compiles</h2>
+            <img src="img/gif/coderun.gif" width=50% style="border:4px solid black;">
+            <h2>After applying patch</h2>
+          </section>
+
+	  <!-- <section> -->
+	  <!--   <img src="img/vc.jpg" width=100%> -->
+          <!-- </section> -->
+	</section>
+
+	<section>
+          <section>
+            <h1>
+	      <img src="img/logo/git.svg" style="background:none; box-shadow:none;margin:10px 0px 0px 100px;float:left;" width=38%>
+	      नै किन?</h1>
+            <h2>the <strong>Stupid</strong> <small>Content Tracker</small></h2>
+            <p style="text-align:right">— creator</p>
+          </section>
+
+          <section>
+            <div>
+	      <img src="img/branching.png" style="background:none; box-shadow:none;position:absolute; left:-60px; top:50px" width=75%>
+	      <h1 class="fragment" style="text-align:center">Distributed</h1>
+	      <h1 class="fragment" style="margin-left:380px">
+		Simple <span class="amp">&</span></h1>
+	      <h1 class="fragment" style="text-align:right; font-style:italic">Fast»</h1>
+            </div>
+          </section>
+
+	  <section>
+	    <h1>Why i <span class="amp">♥</span> git</h1>
+	    <h2 style="margin-top:50px">
+	      <ul style="line-height:110%">
+		<li>&nbsp;dunno <b>hg, svn, bzr...</b>
+		<li>&nbsp;can blame others
+		<li>&nbsp;has gitbash
+	    </ul></h2>
+	  </section>
+	</section>
+
+	<section>
+	  <section data-transition="zoom">
+            <h2>Getting Started… </h2><hr>
+            <h3 style="text-align:left">First timer</h3>
+            <pre><code class="bash" id="config"></code></pre>
+            <h3 style="text-align:left">where are git conf files</h3>
+            <p>git configuration files are stored <code>~/.gitconfig</code></p>
+	  </section>
+
+	  <section>
+	    <h2>Configuration looks like</h2><hr>
+	    <pre><code class="bash" id="config-list"></code></pre>
+	  </section>
+	  <section>
+	    <h2><a href="http://git-scm.com/book/ch7-1.html">Git Configuration</a></h2>
+	    its also true you can do diffrent in diffrent projects
+	  </section>
+	</section>
+
+	<section>
+	  <section>
+	    <h1 style="margin-top:-50px">git*</h1>
+	    <small><output id="clist"></output></small>
+	    <p style="text-align:right"><small>*version 1.9.0</small></p>
+	  </section>
+	</section>
+
+	<!-- <section> -->
+	<!--   <h1>point to rememember</h1> -->
+	<!--   Git Doesn't Track the file. -->
+	<!--   - it tracks the content -->
+	<!-- </section> -->
+
+	<section>
+	  <section>
+	    <h2>Basic Workflow</h2>
+	    <p style="text-align:right"><small>
+		--distributed-even-if-your-workflow-isn't
+	    </small></p>
+	    <h3><ul style="line-height:120%; text-align:left; margin-left:200px">
+		<li>Edit Files
+		<li>Stage the changes
+		<li>Review your changes
+		<li>Commit the changes
+	    </ul></h3>
+	  </section>
+
+	  <!-- <section> -->
+	  <!--   <h1>stage</h1> -->
+	  <!-- </section> -->
+
+	  <!-- <section> -->
+	  <!--   <h1><a href="http://pcottle.github.io/learnGitBranching"> -->
+	  <!-- 	Demo</a></h1> -->
+	  <!--   <h2>Branching</h2> -->
+	  <!-- </section> -->
+
+	  <section>
+	    <a href="http://en.wikipedia.org/wiki/File:Git_operations.svg">
+	      <img src="img/git_operations.svg" id="fullplain" width=100%></a>
+	  </section>
+	</section>
+
+	<section>
+	  <section>
+	    <h2 style="padding-bottom:40px">git-repo free hosting</h2>
+	    <a href="http://Assembla"> Assembla </a>
+	    ·<a href="http://BerliOS"> BerliOS </a>
+	    ·<a href="http://beanstalkapp.com"> Beanstalk </a>
+	    ·<a href="http://bitbucket.org"> Bitbucket </a>
+	    ·<a href="http://CloudForge"> CloudForge </a>
+	    ·<a href="http://CodePlex"> CodePlex </a>
+	    ·<a href="http://www.collab.net/git"> CollabNet </a>
+	    ·<a href="http://github.com" class="afragment highlight-blue"> GitHub </a>
+	    ·<a href="http://www.gitlab.com"> GitLab </a>
+	    ·<a href="http://gitprep.org/"> GitPrep </a>
+	    ·<a href="http://Gitorious"> Gitorious </a>
+	    ·<a href="http://GNU_Savannah"> GNU Savannah </a>
+	    ·<a href="http://Google_Code"> Google Code </a>
+	    ·<a href="http://JavaForge"> JavaForge </a>
+	    ·<a href="http://sourceforge.org"> SourceForge </a>
+	    ·<a href="http://www.visualstudio.com/products/visual-studio-online-overview-vs"> Visual Studio Online </a>
+	  </section>
+
+	  <section data-background="img/texture/board.jpg"  data-background-repeat="repeat" data-background-size="92px">
+	    <img src="img/github.png" style="background:none; box-shadow:none" width=30%>
+	    <h1 id="chalk">
+	      github<br><small>Social Coding</small>
+	    </h1>
+	  </section>
+
+	  <section>
+	    <h1>Why github is cool!</h1>
+	    <ul>
+	      <li>Coz it has CATS</a>
+	      <li><a href="http://developer.github.com/">Public API</a>
+	      <li><a href="http://pages.github.com/">static web-page hosting,</a>
+	      <li><a href="gist.github.com"><b>Gist</b> - pastebin service </a>
+	      <li><a href="https://github.com/blog/1465-stl-file-viewing">3D model support</a>
+	      <li><a href="https://help.github.com/articles/mapping-geojson-files-on-github">Geo Support in gist</a>
+	    </ul>
+	  </section>
+
+	  <section>
+	    <h1 style="margin-top:-50px">foss-np</h1>
+	    <a href="https://github.com/foss-np">
+	      <img src="img/screenshots/githubfoss.png">
+	    </a>
+	  </section>
+	</section>
+
+	<section>
+	  <section>
+	    <h1>Git
+	      <span style="font-family: Argos">Vs.</span>
+	      Others</h1>
+	  </section>
+
+	  <section>
+	    <h2>Git का फाईदाहरु<h2>
+		<h3 style="line-height:120%; margin-left:250px"><ul>
+		    <li>Works Offline
+		    <li>Every clone is a backup
+		    <li>Easy Branch/Merge
+		    <li>Diff Storage
+		</ul></h3>
+	  </section>
+
+	  <!-- Loop would be better here -->
+	  <section data-transition="fade">
+	    <img src="slide-import/BasicGitTalk-018.png" width=80%>
+	  </section>
+	  <section data-transition="none">
+	    <img src="slide-import/BasicGitTalk-019.png" width=80%>
+	  </section>
+	  <section data-transition="none">
+	    <img src="slide-import/BasicGitTalk-020.png" width=80%>
+	  </section>
+	  <section data-transition="none">
+	    <img src="slide-import/BasicGitTalk-021.png" width=80%>
+	  </section>
+	  <section data-transition="none">
+	    <img src="slide-import/BasicGitTalk-022.png" width=80%>
+	  </section>
+	  <section data-transition="none">
+	    <img src="slide-import/BasicGitTalk-023.png" width=80%>
+	  </section>
+	  <section data-transition="none">
+	    <img src="slide-import/BasicGitTalk-024.png" width=80%>
+	  </section>
+	  <section data-transition="none">
+	    <img src="slide-import/BasicGitTalk-025.png" width=80%>
+	  </section>
+	  <section data-transition="none">
+	    <img src="slide-import/BasicGitTalk-026.png" width=80%>
+	  </section>
+	  <section data-transition="none">
+	    <img src="slide-import/BasicGitTalk-027.png" width=80%>
+	  </section>
+	  <section data-transition="none">
+	    <img src="slide-import/BasicGitTalk-028.png" width=80%>
+	  </section>
+	  <section data-transition="none">
+	    <img src="slide-import/BasicGitTalk-029.png" width=80%>
+	  </section>
+	  <section data-transition="none">
+	    <img src="slide-import/BasicGitTalk-030.png" width=80%>
+	  </section>
+	  <section data-transition="none">
+	    <img src="slide-import/BasicGitTalk-031.png" width=80%>
+	  </section>
+	  <section data-transition="none">
+	    <img src="slide-import/BasicGitTalk-032.png" width=80%>
+	  </section>
+
+	  <section>
+	    <img src="slide-import/BasicGitTalk-043.png" width=80%>
+	  </section>
+	  <section>
+	    <img src="slide-import/BasicGitTalk-044.png" width=80%>
+	  </section>
+	  <section>
+	    <img src="slide-import/BasicGitTalk-045.png" width=80%>
+	  </section>
+	  <section>
+	    <img src="slide-import/BasicGitTalk-046.png" width=80%>
+	  </section>
+	  <section>
+	    <img src="slide-import/BasicGitTalk-047.png" width=80%>
+	  </section>
+	  <section>
+	    <img src="img/meme/torvalds.jpg" width=80%>
+	  </section>
+	</section>
+
+	<!-- <section> -->
+	<!--   <section> -->
+	<!--     <h1>Swarming</h1> -->
+	<!--   </section> -->
+	<!--   <section> -->
+	<!--     <h1>git merge</h1> -->
+	<!--     <h3>Join two or more development histories together</h3> -->
+	<!--     <pre><code class="lasso" id="merge"></code></pre> -->
+	<!--   </section> -->
+	<!-- </section> -->
+
+	<section>
+	  <section>
+	    <h1>Mystery of</h1>
+	    <img src="img/sherlock.png" id="plain">
+	    <h1>checkout</h1>
+	  </section>
+
+	  <section>
+	    <h1>git checkout</h1>
+	    <h3><small>Checkout a branch or paths to the working tree</small></h3>
+	    <pre><code class="bash" id="checkout"></code></pre>
+	  </section>
+
+	  <section>
+	    <h2>What does checkout do?</h2>
+	    <h3 style="margin-left:-350px">
+	      <ul>
+		<li> reset file
+		<li> switch branch
+		<li> create branch
+		<li> ...
+	      </ul>
+	    </h3>
+	  </section>
+
+	  <!-- <section> -->
+	  <!--   <h2>git branch</h2> -->
+	  <!--   git brach -f master~5 -->
+	  <!-- </section> -->
+	</section>
+
+	<section>
+	  <section>
+	    <h1>Release</h1>
+	  </section>
+	  <section>
+	    <h2>Submodules</h2>
+	    <h3>nested git</h3>
+	  </section>
+	  <section>
+	    <h2>git-tag</h2>
+	  </section>
+	  <section>
+	    <h2>mulitple remote</h2>
+	    handeling multiple remotes
+	  </section>
+	</section>
+
+	<section id="notodo">
+	  <section>
+	    <h1>what not to do!</h1>
+	    <img src="img/meme/newspaper_guy_tear.png" id="plain" width="40%">
+	  </section>
+
+	  <section>
+	    <h2>git push -f</h2>
+	    <img src="img/meme/force.jpg" width=70%>
+	  </section>
+
+	  <section data-background="img/texture/binary.png"  data-background-repeat="repeat">
+	    <h2>upload binary</h2>
+	    <a href="http://www.duelinganalogs.com/comic/hello-im-linux/">
+	      <img src="img/mash-up/both.png">
+	    </a>
+	  </section>
+
+	  <section>
+	    <h2>upload large files</h2>
+	    <img src="img/meme/large.jpg" width=50%>
+	  </section>
+
+	  <section>
+	    <h1>commit messages</h1>
+	    <h2>> 80 words</h2>
+	  </section>
+	</section>
+
+
+	<section>
+	  <section id="smartypants">
+	    <a href="https://octodex.github.com/">
+	      <img src="img/mash-up/octocat-gangnam.png" width="70%" id="fullplain">
+	    </a>
+	  </section>
+
+	  <section data-state="starwars">
+	    <h2 style="color:#fded02">
+	      git clone -r</h2>
+	    <img src="img/Star_wars_the_clone_wars.png" id="plain">
+	    <h3 style="color:#fded02">git submodule init</h3>
+	    <h3 style="color:#fded02">git submodule update</h3>
+	  </section>
+
+	  <section>
+	    <h2>git commit -am <small style="margin-top:12px">COMMIT_MSG</small></h2>
+	    <h3>commit with message</h3>
+	    <pre><code class="lasso" id="commit"></code></pre>
+	  </section>
+
+	  <section>
+	    <h2>git push origin --all</h2>
+	    <img src="img/meme/git-push.jpg">
+	  </section>
+
+	  <section>
+	    <h2>git add -u</h2>
+	    <h3>Add all untracted files</h3>
+	    <pre><code class="lasso" id="add"></code></pre>
+	  </section>
+
+	  <section>
+	    <h2>git commit --orphan <small style="margin-top:12px">BRANCH</small></h2>
+	    <h3>make the orphan branch</h3>
+	  </section>
+
+	  <section>
+	    <h2>git clean -df</h2>
+	    <img src="img/mash-up/kimonoto.png" id="plain" width=50% style="margin:-20px">
+	    <h3>clean up untracked files</h3>
+	  </section>
+	</section>
+
+	<section>
+	  <section>
+	    <h1>survival</h1>
+	  </section>
+	  <section>
+	    <h2>shallow clone</h2>
+	    <h3>git clone --depth=# </h3>
+	  </section>
+	  <section>
+	    <h2>.git/config</h2>
+	  </section>
+	  <section>
+	    <h2>issue list integration</h2>
+	    <h3>git commit -m "fix #5"
+	  </section>
+	</section>
+
+
+	<section>
+	  <section>
+	    <h1>time traveller</h1>
+	    <img src="img/meme/docbrown.jpg" width="40%">
+	  </section>
+
+	  <section>
+	    <h2>git environment</h2>
+	    <h3>HEAD</h3>
+	    <h3>origin</h3>
+	    <h3>master</h3>
+	  </section>
+
+	  <section>
+	    <h1>relative ref</h1>
+	    <p>28571874b75900573b0cdf750c9c77d261d29183</p>
+	    <h2>^*</h2>
+	    <h2>~#</h2>
+	  </section>
+
+	  <section>
+	    <h2>git commit --amend</h2>
+	  </section>
+
+	  <section>
+	    <h2>git rebase -i [Commit ID]</h2>
+	  </section>
+	</section>
+
+	<section>
+	  <section>
+	    <h1>Tips <span class="amp">&</span> Tricks</h1>
+	  </section>
+
+	  <section>
+	    <h1>Custom Shell Prompt</h1>
+	    <p><code>
+		github.com/git/git/master/contrib/completion/git-prompt.sh</code></p>
+	    <small><b>Note*</b>: Ubuntu Doesn't seem to have it default
+	    </small>
+	  </section>
+
+	  <section>
+	    <h1>gitk</h1>
+	    <img src="img/screenshots/gitk.png" style="box-shadow:none" width=70% >
+	  </section>
+
+	  <section>
+	    <h1>git-cola</h1>
+	    <img src="img/screenshots/gitcola.png" style="margin:20px; box-shadow:none" width=70%>
+	  </section>
+
+	  <section>
+	    <h1>gist</h1>
+	    <h2>gist.github.com</h2>
+	    <h5>https://help.github.com/categories/23/articles</h5>
+	  </section>
+
+	  <section>
+	    <h1>tig</h1>
+	  </section>
+
+	  <section>
+	    <h1>ssh-keys</h1>
+	  </section>
+
+	  <section>
+	    <h2>Also check</h2>
+	    <h1><code>$ git bz</code></h1>
+	    <h3>Bugzillia integration</h3>
+	  </section>
+	</section>
+
+	<section id="non-coder">
+	  <section>
+	    <h1>for non-coders</h1>
+	    <h3>
+	      <ul>
+		<li>Act like you code
+		<li>get the latest version
+	      </ul>
+	    </h3>
+	  </section>
+
+	  <section>
+	    <img src="img/logo/mswin.svg" align="left" id="fullplain" style="margin-top:-50px;">
+	    <h2>Not just for git!</h2>
+	    <h3><ul>
+		<li>&nbsp;has cat
+		<li>&nbsp;ssh client
+		<li>&nbsp;bash terminal <small>(yeh! multi-processing)</small>
+		<li>&nbsp;few linux commands
+	    </ul></h3>
+	    <p>Still missing linux commands, install
+	      <a href="http://gnuwin32.sourceforge.net/packages.html">
+		gnuwin32 packages</a>
+	    </p>
+	  </section>
+
+	</section>
+
+	<section>
+	  <h3><q>
+	      &ldquo;After all GIT is just a tool! <br>Fool with the tool is still a Fool!&rdquo;
+	  </h3></q>
+	  <a href="http://goldcoaster.wordpress.com/2007/09/15/the-whole-internet-on-floppy-disk/">
+	    <img src="img/floppy.png" style="box-shadow:none"
+		 width=40%>
+	  </a>
+	</section>
+
+	<section>
+	  <h1>Resources</h1>
+	  <h3><ul>
+	      <li><a href="http://git-scm.com/"><b>git-scm</b></a> - Official git website
+	      <li><a href="https://lwn.net/Articles/131657/">Inside of git</a>
+	      <li><a href="https://github.com/schacon/git-presentations/blob/master/basic_git_talk/BasicGitTalk.pdf?raw=true">
+		  <b>Intro to Git</b> by Scott Chacon</a>
+	      <li><a href="http://lmgtfy.com/?q=learn%20git">Google it...</a>
+	  </ul></h3>
+	</section>
+
+	<section>
+	  <h2><b>Awesome people to thanx</b><h2>
+	      <a href="http://github.com/hardfire/"> @hardfire </a>
+	      ·<a href="http://github.com/mjt-"> @mjt </a>
+	      ·<a href="http://github.com/neutrino/"> @neutrino </a>
+	      ·<a href="http://github.com/samundra/"> @samundra </a>
+	  </ul>
+	</section>
+
+	<section>
+	  <h1><small>@rhoit / github</small><br>Thank You!</h1>
+	</section>
+</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+<script src="js/mine.js"></script>
+
+<script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
+
+  theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+  transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+  // Parallax scrolling
+  // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+  // parallaxBackgroundSize: '2100px 900px',
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+  { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+  { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+  { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+  { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+  });
+</script>
+
+</body>
+</html>

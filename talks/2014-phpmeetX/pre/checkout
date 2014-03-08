@@ -1,0 +1,8 @@
+$ git checkout [-q] [-f] [-m] [&lt;branch&gt;]
+$ git checkout [-q] [-f] [-m] --detach [&lt;branch&gt;]
+$ git checkout [-q] [-f] [-m] [--detach] &lt;commit&gt;
+$ git checkout [-q] [-f] [-m] [[-b|-B|--orphan]
+>   &lt;new_branch&gt;] [&lt;start_point&gt;]
+$ git checkout [-f|--ours|--theirs|-m|--conflict=&lt;style&gt;]
+>   [&lt;tree-ish&gt;] [--] &lt;paths&gt;...
+$ git checkout [-p|--patch] [&lt;tree-ish&gt;] [--] [&lt;paths&gt;...]

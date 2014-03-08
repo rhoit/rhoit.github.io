@@ -1,0 +1,10 @@
+$ git branch [--color[=&lt;when&gt;] | --no-color] [-r | -a]
+>   [--list] [-v [--abbrev=&lt;length&gt; | --no-abbrev]]
+>   [--column[=&lt;options&gt;] | --no-column]
+>   [(--merged | --no-merged | --contains) [&lt;commit&gt;]] [&lt;pattern&gt;...]
+$ git branch [--set-upstream | --track | --no-track] [-l] [-f] &lt;branchname&gt; [&lt;start-point&gt;]
+$ git branch (--set-upstream-to=&lt;upstream&gt; | -u &lt;upstream&gt;) [&lt;branchname&gt;]
+$ git branch --unset-upstream [&lt;branchname&gt;]
+$ git branch (-m | -M) [&lt;oldbranch&gt;] &lt;newbranch&gt;
+$ git branch (-d | -D) [-r] &lt;branchname&gt;...
+$ git branch --edit-description [&lt;branchname&gt;]

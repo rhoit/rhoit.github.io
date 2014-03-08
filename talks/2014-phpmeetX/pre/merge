@@ -1,0 +1,5 @@
+$ git merge [-n] [--stat] [--no-commit] [--squash] [--[no-]edit]
+>   [-s &lt;strategy&gt;] [-X &lt;strategy-option&gt;] [-S[&lt;keyid&gt;]]
+>   [--[no-]rerere-autoupdate] [-m &lt;msg&gt;] [&lt;commit&gt;...]
+$ git merge &lt;msg&gt; HEAD &lt;commit&gt;...
+$ git merge --abort

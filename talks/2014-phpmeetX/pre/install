@@ -1,0 +1,11 @@
+# dpkg based
+$ sudo apt-get install git
+
+# pacman based
+$ sudo pacman -S git
+
+# rpm based
+$ sudo yum install git
+
+# Mac
+$ brew install git # http://www.git-scm.com/download/mac
