@@ -1,0 +1,428 @@
+#+TITLE: Program लेख्न अल्छि लाग्यो
+#+DATE: Monday, Jul 27 2015
+#+OPTIONS: toc:0
+#+DESCRIPTION: python meet #7 on Sun, 02 Aug 2015
+#+STARTUP: content inlineimages
+
+[[./ninja.gif]]
+
+*DISCLAIMER*: DON'T TRY IT IN +HOME+ PYTHON 2
+
+* how do you turn this on
+** Number of Digits
+   #+begin_verse
+   The pages of a book are consecutively numbered from 1 through 999.
+   How many digits are there in this numbering?
+   #+end_verse
+
+   #+begin_src python +n :results output
+     letters = 0
+     for i in range(1, 1000):
+         letters += len(str(i))
+
+     print(letters)
+   #+end_src
+
+   #+RESULTS:
+   : 2889
+
+*** अल्छि लागेको बेला
+    #+begin_src python :results output
+      print(sum(len(str(i)) for i in range(1, 1000)))
+    #+end_src
+
+    #+RESULTS:
+    : 2889
+
+** Position of the Digits
+   #+begin_verse
+   How many 2-digit numbers have a tens digit that is smaller than the
+   units digit?
+   #+end_verse
+
+   #+begin_src python :results output
+     numbers = []
+     for i in range(10, 100):
+         if i//10 < i%10:
+             numbers.append(i)
+     print(numbers)
+     print(len(numbers))
+   #+end_src
+
+   #+RESULTS:
+   : [12, 13, 14, 15, 16, 17, 18, 19, 23, 24, 25, 26, 27, 28, 29, 34, 35, 36, 37, 38, 39, 45, 46, 47, 48, 49, 56, 57, 58, 59, 67, 68, 69, 78, 79, 89]
+   : 36
+
+*** अल्छि लागेको बेला
+    #+begin_src python :results output
+      numbers = [i for i in range(10, 100) if i//10 < i%10]
+      print(numbers)
+      print(len(numbers))
+    #+end_src
+
+    #+RESULTS:
+    : [12, 13, 14, 15, 16, 17, 18, 19, 23, 24, 25, 26, 27, 28, 29, 34, 35, 36, 37, 38, 39, 45, 46, 47, 48, 49, 56, 57, 58, 59, 67, 68, 69, 78, 79, 89]
+    : 36
+
+** Number Combination
+   #+begin_verse
+   There is a list of 10 numbers.
+
+       [1, 1, 2, 2, 3, 3, 4, 4, 5, 5]
+
+   Five numbers are selected from the set and added together.
+   These two sums are then multiplied.
+
+   Find the maximum possible product of the multiplication.
+   #+end_verse
+
+   #+begin_src python :results output
+     from itertools import combinations
+
+     A = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5]
+     s = sum(A)
+     max_product = float("-inf")
+     for c in combinations(A, 5):
+          csum = sum(c)
+          product = csum * (s - csum)
+          if product > max_product:
+              max_product = product
+
+     print(max_product)
+   #+end_src
+
+   #+RESULTS:
+   : 225
+
+*** अल्छि लागेको बेला
+   #+begin_src python :results output
+     from itertools import combinations
+
+     A = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5]
+     s = sum(A)
+     print(max((s - sum(c)) * sum(c) for c in combinations(A, 5)))
+   #+end_src
+
+   #+RESULTS:
+   : 225
+
+** Thanks to
+
+   माथिका सबै प्रश्न [[https://www.facebook.com/quizdaily.nepal][quiznepal]] का हुन्
+
+   [[./quiznepal.jpg]]
+
+* λ func
+  #+begin_src python :results output
+    def function_of_non_lazy_programmer(x):
+        print(2 * x)
+
+    function_of_non_lazy_programmer(2)
+  #+end_src
+
+  #+RESULTS:
+  : 4
+
+  अब map प्रयोग गर्दा
+
+  #+begin_src python :results output
+    lambda_func = lambda x: print(2 * x)
+    lambda_func(4)
+
+    # or something like
+    (lambda x: print(2 * x))(8)
+  #+end_src
+
+  #+RESULTS:
+  : 8
+  : 16
+
+** अत्ति अल्छि लागेको बेला!
+
+   #+begin_src python :results output
+     factorial = lambda n: 1 if n == 1 else n * factorial(n-1)
+     print(factorial(2))
+     print(factorial(3))
+     print(factorial(4))
+   #+end_src
+
+   #+RESULTS:
+   : 2
+   : 6
+   : 24
+
+* map
+
+  घेरैले गर्ने तरिका
+
+  #+name naive way
+  #+begin_src python :results output
+    square_lst = []
+    for i in range(10):
+        map_result = i * i
+        square_lst.append(map_result)
+
+    print(square_lst)
+  #+end_src
+
+  #+RESULTS:
+  : [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+  अब [[https://www.youtube.com/watch?v=8gO_lxThc1M][map]] प्रयोग गर्दा
+
+  #+begin_src python :results output
+    def square(x):
+         return x*x
+
+    square_lst = map(square, range(5))
+    print(square_lst)
+    print(type(square_lst))
+    print(list(square_lst))
+
+    square_lst1 = map(lambda x: x * x, range(5, 10))
+    print(list(square_lst1))
+  #+end_src
+
+  #+RESULTS:
+  : <map object at 0x7f751e997748>
+  : <class 'map'>
+  : [0, 1, 4, 9, 16]
+  : [25, 36, 49, 64, 81]
+
+** अत्ति अल्छि लागेको बेला!
+
+   #+begin_src python :results output
+     fibonacci = lambda n: 1 if n < 2 else fibonacci(n-2) + fibonacci(n-1)
+     f = map(fibonnaci, range(8))
+     print(list(f))
+   #+end_src
+
+   #+RESULTS:
+   : [1, 1, 2, 3, 5, 8, 13, 21]
+
+** aegis
+   #+begin_src python :results output
+     fibonacci = lambda n: 1 if n < 2 else fibonacci(n-2) + fibonacci(n-1)
+     f = [ fibonacci(n) for n in range(0, 15) ]
+     print(f)
+
+     # अब some property fibonacci
+     ratios = [ "%2.3f"%(n/m) for m, n in zip(f[::2], f[1::2]) ]
+     print(ratios)
+   #+end_src
+
+   #+RESULTS:
+   : [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
+   : ['1.000', '1.500', '1.600', '1.615', '1.618', '1.618', '1.618']
+
+   Similarly, in strings
+   #+begin_src python :results output
+     list_of_strings = ['Art', 'Music', 'Design']
+     print([ x.lower() for x in list_of_strings ])
+   #+end_src
+
+   #+RESULTS:
+   : ['art', 'music', 'design']
+
+* filter
+
+  *map* मा जस्तै
+
+  #+begin_src python :results output
+    even_list = []
+    for i in range(10):
+        if i % 2 == 0:
+            even_list.append(i)
+
+    print(even_list)
+  #+end_src
+
+  #+RESULTS:
+  : [0, 2, 4, 6, 8]
+
+  *filter* गर्न
+
+  #+begin_src python :results output
+    odd = filter(lambda x: x % 2 != 0, range(10))
+    print(type(odd))
+    print(list(odd))
+  #+end_src
+
+  #+RESULTS:
+  : <class 'filter'>
+  : [1, 3, 5, 7, 9]
+
+** aegis
+   #+begin_src python :results output
+     print([ x for x in range(10) if x % 3 == 0 ])
+
+     list_of_strings = ['Art', 'Music', 'Design']
+     print([ x for x in list_of_strings if len(x) > 5 ])
+   #+end_src
+
+   #+RESULTS:
+   : [0, 3, 6, 9]
+   : ['Design']
+
+   #+begin_src python :results output
+     print("a "*5)
+     z2 = zip("a"*5, range(5))
+     # print(list(z2))
+     print([ i + str(j) for i, j in z2 if j < 2 ])
+   #+end_src
+
+   #+RESULTS:
+   : a a a a a
+   : ['a0', 'a1']
+
+* reduce
+
+  जुन सबै ठाउँमा छ तर कतै पनि छैन
+
+  #+begin_src python :results output
+    range_sum = 0
+    for i in range(10):
+        range_sum += i
+
+    print(range_sum)
+  #+end_src
+
+  #+RESULTS:
+  : 45
+
+  #+begin_src python :results output
+    from functools import reduce
+
+    my_sum = reduce(lambda x, y: x + y, range(10))
+    print(type(my_sum))
+    print(my_sum)
+  #+end_src
+
+  #+RESULTS:
+  : <class 'int'>
+  : 45
+
+  or most commonly sum(), max(), min() is the reduce
+
+** factorial
+   #+begin_src python :results output
+     from functools import reduce
+
+     print(reduce(lambda x, y: x * y, range(1,5)))
+   #+end_src
+
+   #+RESULTS:
+   : 24
+
+   when you are lazy to write lambda
+
+   #+begin_src python :results output
+     from functools import reduce
+     import operator
+
+     print(reduce(operator.mul, range(1, 5)))
+   #+end_src
+
+   #+RESULTS:
+   : 24
+
+** Caesar Cipher
+   #+begin_src python :results output
+   from functools import reduce
+
+   def encoder(c, shift):
+       if not c.isalpha(): return c
+       if c.islower(): return chr((ord(c) - 97 + shift)%26 + 97)
+       return chr((ord(c) - 65 + shift)%26 + 65)
+
+   print(''.join(encoder(c, 4) for c in "python meetup #7"))
+
+   print(reduce(lambda x, y: x + encoder(y, -4), "tcxlsr qiixyt #7!", ''))
+   #+end_src
+
+   #+RESULTS:
+   : tcxlsr qiixyt #7
+   : python meetup #7!
+
+* idkfa
+  #+begin_src python :results output
+    from functools import reduce
+
+    binary = [ str(bin(i))[2:] for i in range(10) ]
+    print(binary)
+    print([ reduce(lambda y, x: int(x) + 2 * int(y), b, 0) for b in binary ])
+  #+end_src
+
+  #+RESULTS:
+  : ['0', '1', '10', '11', '100', '101', '110', '111', '1000', '1001']
+  : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+** dict comprehensions
+   #+begin_src python :results output
+    from functools import reduce
+
+    octal = [ str(oct(i))[2:] for i in range(5, 15) ]
+    print(octal)
+    my_oct_map = { o : reduce(lambda y, x: int(x) + 8 * int(y), o, 0) for o in octal }
+    print(my_oct_map['10'])
+
+    hexa = [ str(hex(i))[2:] for i in range(8, 18) ]
+    print(hexa)
+    my_hex_map = { h: reduce(lambda y, x: int(x, 16) + 16 * int(y), h, 0) for h in hexa }
+    print(my_hex_map['d'])
+   #+end_src
+
+   #+RESULTS:
+   : ['5', '6', '7', '10', '11', '12', '13', '14', '15', '16']
+   : 8
+   : ['8', '9', 'a', 'b', 'c', 'd', 'e', 'f', '10', '11']
+   : 13
+
+   padding the binary
+
+   #+begin_src python :results output
+     binary = { i: str(bin(v))[2:] for i in range(8) }
+     print(type(binary))
+     print(binary[4])
+     print(binary)
+     pbinary = { k: v.zfill(3) for k, v in binary.items() }
+     print(pbinary)
+   #+end_src
+
+   #+RESULTS:
+   : <class 'dict'>
+   : 100
+   : {0: '0', 1: '1', 2: '10', 3: '11', 4: '100', 5: '101', 6: '110', 7: '111'}
+   : {0: '000', 1: '001', 2: '010', 3: '011', 4: '100', 5: '101', 6: '110', 7: '111'}
+
+** hexundumpify
+   #+begin_src python :results output
+     hexdump = "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d"
+     a = iter(hexdump)
+     print(bytes([ int(i+j, 16) for i, j in zip(a, a)]))
+   #+end_src
+
+   source [[http://cryptopals.com/sets/1/challenges/1/][cryptopal]]
+
+** lol
+
+   *List Of List*, how does comprehensions looks :), try yourself.
+
+** In tHE enD
+
+   *NOBODY HAVE TIME TO READ YOUR CODE, SO MAKE IT SHORT!*
+
+*** लास्टमा
+
+    try solving this! [[https://www.facebook.com/quizdaily.nepal][quiznepal]] लाई घेरै घेरै धन्यवाद
+
+    #+begin_verse
+    I need 1 + 9 + 25 = 35 cubes to build a pyramid with a height of 3 cubes.
+    Estimate the number of cubes for a pyramid with a height of 30 cubes.
+    #+end_verse
+
+    [[./pyramid.jpg]]
+
+# Local Variables:
+# buffer-read-only: t
+# End:

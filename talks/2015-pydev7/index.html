@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>py meetup #7</title>
+    <link rel="StyleSheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/bekar.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/prettify.css">
+  </head>
+  <body>
+    <div id="header">
+    </div>
+
+    <div class="wrapper">
+      <panel>
+        <h1>rhoit.com/talks</h1>
+        <p>echo-rush</p>
+        <p>
+          <span class="glyphicon glyphicon-tags" aria-hidden="true">&nbsp;</span>
+          <a class="tag-list" href="#">#python</a>
+        </p>
+
+        </div>
+      </panel>
+
+      <section>
+        <div id="blog">
+          <div class="blog-tag">2015 Aug 02</div>
+          <div id="blog-content"></div>
+        </div>
+        <div id="comment">
+          <br>
+          <div id="disqus_thread"></div>
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          Powered by <a href="https://github.com/rhoit/bekar-static-gen">bekar-static-gen</a>
+        <p>
+      </footer>
+    </div>
+    <script type="text/javascript" src="../../js/org.js"></script>
+    <script type="text/javascript" src="../../js/prettify.js"></script>
+
+    <script type="text/javascript">
+     function body_load () {
+         var fp = new XMLHttpRequest();
+         var orgParser = new Org.Parser();
+         fp.open('GET', 'main.org', false);
+         fp.send();
+         var docHTML = orgParser.parse(fp.responseText).convert(Org.ConverterHTML, {translateSymbolArrow: true}).toString();
+         document.getElementById("blog-content").innerHTML=docHTML;
+         prettyPrint();
+     }
+
+     body_load();
+    </script>
+
+    <script type="text/javascript">
+     var disqus_shortname = 'rhoit';
+
+     (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  </body>
+</html>
