@@ -123,12 +123,6 @@ pre {
     margin          : 0px 25px 10px;
 }
 
-pre.prettyprint {
-    background      : #3f3f3f;
-    border          : 0px solid #3f3fff;
-    padding         : 17px 0px 0px 0px;
-}
-
 code {
      font-family     : Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
