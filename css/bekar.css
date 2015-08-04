@@ -11,6 +11,12 @@
     opacity         : 0.8;
 }
 
+body {
+    padding         : 50px;
+    background      : url("../img/symphony.png") fixed;
+}
+
+
 #header p {
     font-size       : 100%;
     font-weight     : bold;
@@ -27,99 +33,9 @@
     text-decoration : none;
 }
 
-#header p:hover {
-    color           : #6247e5;
-}
-
-body {
-    padding         : 50px;
-    font            : 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial;
-    color           : #555;
-    background      : url("../img/symphony.png") fixed;
-}
-
-h1 {
-    color           : #222;
-    margin          : 0 0 20px;
-}
-
-p, ul, ol, table, pre, dl {
-    margin          : 0 0 20px;
-}
-
-h1, h2, h3 {
-    line-height     : 1.1;
-}
-
-h1 {
-    font-size       : 28px;
-}
-
-h3, h4, h5, h6 {
-    color           : #494949;
-}
-
-a {
-    color           : #39c;
-    font-weight     : 400;
-    text-decoration : none;
-}
-
-a small {
-    font-size       : 11px;
-    color           : #777;
-    margin-top      : -0.6em;
-    display         : block;
-}
-
 .wrapper {
     width           : 90%;
     margin          : 0 auto;
-}
-
-blockquote {
-    border-left     : 1px solid #e5e5e5;
-    margin          : 0;
-    padding         : 0 0 0 20px;
-    font-style      : italic;
-}
-
-code, pre {
-    font-family     : Monaco, Lucida Console, Terminal;
-    color           : #333;
-    font-size       : 12px;
-}
-
-pre {
-    padding         : 8px 15px;
-    background      : #f8f8f8;
-    border-radius   : 5px;
-    border          : 1px solid #e5e5e5;
-    overflow-x      : auto;
-}
-
-table {
-    width           : 100%;
-    border-collapse : collapse;
-}
-
-th, td {
-    text-align      : left;
-    padding         : 5px 10px;
-    border-bottom   : 1px solid #e5e5e5;
-}
-
-dt {
-    color           : #444;
-    font-weight     : 700;
-}
-
-th {
-    color           : #444;
-}
-
-img {
-    max-width     : 100%;
 }
 
 panel {
@@ -200,6 +116,21 @@ footer {
     float           : left;
     position        : fixed;
     bottom          : 50px;
+}
+
+pre {
+    font-family     : Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    margin          : 0px 25px 10px;
+}
+
+pre.prettyprint {
+    background      : #3f3f3f;
+    border          : 0px solid #3f3fff;
+    padding         : 17px 0px 0px 0px;
+}
+
+code {
+     font-family     : Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 @media print, screen and (max-width: 960px) {
