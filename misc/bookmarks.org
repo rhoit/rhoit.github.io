@@ -1,5 +1,0 @@
-#+TITLE: Internet Bookmarks
-#+DATE: Monday, Aug 03 2015
-
-* Arts
-  [[http://kcd-elements.tumblr.com/][*Elements* Experiments in Character Design]]
