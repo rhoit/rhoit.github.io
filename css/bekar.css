@@ -44,6 +44,10 @@ panel {
     position        : fixed;
 }
 
+panel h1 {
+    font-family     : Helvetica;
+}
+
 panel ul {
     list-style      : none;
     height          : 40px;
@@ -101,7 +105,7 @@ section {
 }
 
 small {
-    font-size       : 11px;
+    font-size       : 10px;
 }
 
 hr {
@@ -118,13 +122,13 @@ footer {
     bottom          : 50px;
 }
 
-pre {
+
+pre, code {
     font-family     : Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    margin          : 0px 25px 10px;
 }
 
-code {
-     font-family     : Consolas, "Liberation Mono", Menlo, Courier, monospace;
+pre {
+    margin          : 0px 25px 10px;
 }
 
 @media print, screen and (max-width: 960px) {
