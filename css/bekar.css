@@ -13,6 +13,7 @@
 
 body {
     padding         : 50px;
+    font-size       : 15px;
     background      : url("../img/symphony.png") fixed;
 }
 
