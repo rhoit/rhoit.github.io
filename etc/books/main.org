@@ -1,0 +1,33 @@
+#+TITLE: Bookmarks
+#+DATE: Monday, Aug 03 2015
+#+OPTIONS: toc:0
+
+* Books
+  - Amy Chua — *Battle Hymn of the Tiger Mother*
+  - Peggy Orenstein — *Cinderella Ate My Daughter*
+  - Perl S. Buck — *Good Earth*
+
+** Issac Asimov, Foundation Series
+   - I, Robot
+   - Caves of Steel
+   - The Naked Sun
+   - The Robots of Dawn
+   - Robots and Empire
+   - The Currents of Space
+   - The Stars, Like Dust
+   - Pebble in the Sky
+   - Prelude to Foundation
+   - Forward the Foundation
+   - Foundation
+   - Foundation and Empire
+   - Second Foundation
+   - Foundation's Edge
+   - Foundation and Earth
+
+** Suzanne Collins, Hunger Games Series
+   - The Hunger Games
+   - Catching Fire
+   - Mockingjay
+
+* Links
+  - [[http://kcd-elements.tumblr.com/][*Elements* Experiments in Character Design]]
