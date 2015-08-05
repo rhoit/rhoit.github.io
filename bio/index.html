@@ -1,55 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>rhoit.github.com by rhoit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>bio</title>
 
-    <link rel="stylesheet" href="../stylesheets/styles.css">
-    <link rel="../stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="../viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bekar.css">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>rhoit.github.com</h1>
-        <p>spider bit me!</p>
-	<br>
-        <p class="view">
-	  <a href="https://github.com/rhoit"><img width="12%" alt="github" src="../img/github.png"></a>
-	  <a href="http://osrc.dfm.io/rhoit"><img width="12%" alt="osrc" src="../img/osrc.png"></a>
-	  <a href="https://bitbucket.org/rhoit"><img width="12%" alt="bitbucket" src="../img/bitbucket.png"></a>
-	  <a href="http://www.linkedin.com/pub/rhoit-amatya/15/284/14a"><img width="12%" alt="linkedin" src="../img/linkedin.jpg"></a></p>
-      </header>
+    <div id="header">
+	  <p style="width: 80%; text-align: right">
+        <a href="/"><img height="18px" src="../img/svg/home.svg"> home</a>&nbsp;&nbsp;
+        <a href="/blog"><img height="18px" src="../img/svg/quill.svg"> blog</a>&nbsp;&nbsp;
+        <a href="/notes"><img height="18px" src="../img/svg/notes.svg"> notes</a>&nbsp;&nbsp;
+        <a href="/notes"><img height="18px" src="../img/svg/projects.svg"> projects</a>&nbsp;&nbsp;
+        <a href="/etc"><img height="18px" src="../img/svg/etc.svg"> etc</a>&nbsp;&nbsp;
+	  </p>
+      <p style="width: 20%; text-align: right">
+        <a href="/">About <img height="18px" src="../img/svg/about.svg"></a>
+      </p>
+    </div>
 
+    <div class="wrapper">
+      <panel>
+        <h1>rhoit.com</h1>
+        <p>things about me</p>
+        <img alt="profile" src="../img/svg/profile.svg">
+      </panel>
 
       <section>
         <h1>About Me</h1>
 
-	<p>Interested in Arts, Music and Design. Loves to work on Open Platform with Agility.
-	</p>
+	    <p>Interested in Arts, Music and Design. Loves to work on Open
+	    Platform with Agility.</p>
 
 
-	<h3>Present</h3>
+	    <h3>Present</h3>
+	    <p>Currently enrolled in Kathmandu University, Masters by
+	      Research Program. Doing some research on <code>Opinion Mining</code> sneak
+	      peak <a href="http://rhoit.github.io/talks/kures14/">here</a>.<br>
 
-	<p>
-	  Currently enrolled in Kathmandu University, Masters by Research Program. Doing some research on <code>Opinion Mining</code> sneak peak <a href="http://rhoit.github.io/talks/kures14/">here</a>.<br>
-	  Ghost of the past <a href="http://rhoit.github.io/talks/opinion/">here</a>.
-	</p>
+          Ghost of the past <a href="http://rhoit.github.io/talks/opinion/">here</a>.
+	    </p>
 
-	<h3>Kung-Fu!</h3>
+	    <h3>Kung-Fu!</h3>
+	    <p>Skilled in <code>Programming, Basic Graphics, Typesetting,
+           Technical Document writing</code>. And really lazy to do web!
+	    </p>
 
-	<p>
-	  Skilled in <code>Programming, Basic Graphics, Typesetting, Technical Document writing</code>. And really lazy to do web!
-	</p>
+	    <h3>Contact</h3>
+	    <p>Drop me an <a href="mailto:rho.rhoit@gmail.com">email</a>,
+          If I don't response within <code>48</code> hrs I might be missing!
+        </p>
 
-	<h3>Contact</h3>
 
-	<p>Drop me an <a href="mailto:rho.rhoit@gmail.com">email</a>, If I don't response within <code>48</code> hrs I might be missing!</p>
+        <h3>Support Me!</h3>
+        <p>If you like my works support me. </p>
+        <p>
+          <script data-gratipay-username="rhoit"
+                  data-gratipay-widget="button"
+                  src="//grtp.co/v1.js"></script>
+          <!-- <script data-callback="rhoit.github.com/bio"
+          data-name="Donate"
+          data-button="donate"
+          src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=rho.rhoit@gmail.com" async="async"
+          ></script>
+	      </p>
+          -->
       </section>
+
       <footer>
-	<p><small><a href="rhoit.pdf">My Resume</a></small><p>
-        <p><small>Last Update on &mdash; 2013 Nov 16</small></p>
+        <p class="view">
+	      <a href="https://github.com/rhoit"><img width="28px" alt="github" src="../img/github.png" /></a>
+	      <a href="https://bitbucket.org/rhoit"><img width="28px" alt="bitbucket" src="../img/bitbucket.png" /></a>
+	      <a href="http://www.linkedin.com/pub/rhoit-amatya/15/284/14a"><img width="28px" alt="linkedin" src="../img/linkedin.jpg" /></a>
+        </p>
+	    <p><a href="rhoit.pdf">My Resume</a> <small>last update 2015
+	    March 10</small></p>
+        <p>
+          Powered by <a href="https://github.com/rhoit/bekar-static-gen">
+          bekar-static-gen</a>
+        </p>
       </footer>
     </div>
   </body>
