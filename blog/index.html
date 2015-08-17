@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>blog</title>
+
+    <style>
+     #blog:hover {
+       background: #F1F3FE;
+       box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.5)
+     }
+    </style>
+
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bekar.css">
+    <link rel="stylesheet" href="../css/blog.css">
+  </head>
+  <body>
+    <div id="header">
+	  <p style="width: 80%; text-align: right">
+        <a href="../"><img height="18px" src="../img/svg/home.svg"> home</a>&nbsp;&nbsp;
+        <a href="../blog/"><img height="18px" src="../img/svg/quill.svg"> blog</a>&nbsp;&nbsp;
+        <a href="../notes/"><img height="18px" src="../img/svg/notes.svg"> notes</a>&nbsp;&nbsp;
+        <a href="../experiments/"><img height="18px" src="../img/svg/flask.svg"> experiments</a>&nbsp;&nbsp;
+        <a href="../etc/"><img height="18px" src="../img/svg/etc.svg"> etc</a>&nbsp;&nbsp;
+	  </p>
+      <p style="width: 20%; text-align: right">
+        <a href="../bio/">About <img height="18px" src="../img/svg/about.svg"></a>
+      </p>
+    </div>
+
+    <div class="wrapper">
+      <panel>
+        <h1>rhoit.com/blog</h1>
+        <p>Few scribbles and rants</p>
+      </panel>
+
+      <section>
+        <div id="blog" onclick="location.href='001-blog'">
+          <div class="blog-tag-flow">2015 Jan 17</div>
+          <div id="blog-content">
+            <h1 class="title">Let's Blog <del>Again</del></h1>
+            <p>
+              After learning about <b>gh-pages</b>, from <b>github</b>,
+              I came to learn about <b>static web-page generator</b>.
+              This is the story of procrastination, where I decided to
+              create a site. +Strangely+ my first blog, published 7
+              months late, explain how all started after all.
+            </p>
+          </div>
+          <p>
+            <span class="glyphicon glyphicon-tags" aria-hidden="true">&nbsp;</span>
+            <a class="tag-list" href="#">#rant</a>
+            <a class="tag-list" href="#">#project</a>
+          </p>
+
+        </div>
+        <script type="text/javascript">
+         $("#blog").click(
+        </script>
+      </section>
+
+      <footer>
+        <p>
+          Powered by <a href="https://github.com/rhoit/bekar-static-gen">bekar-static-gen</a>
+        <p>
+      </footer>
+    </div>
+  </body>
+</html>

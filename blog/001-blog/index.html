@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lets blog again</title>
+
+    <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../vendor/highlight/css/zenburn.css">
+    <link rel="stylesheet" href="../../css/bekar.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+  </head>
+  <body>
+    <div id="header">
+      <p style="width: 80%; text-align: right">
+        <a href="../../"><img height="18px" src="../../img/svg/home.svg"> home</a>&nbsp;&nbsp;
+        <a href="../../blog/"><img height="18px" src="../../img/svg/quill.svg"> blog</a>&nbsp;&nbsp;
+        <a href="../../notes/"><img height="18px" src="../../img/svg/notes.svg"> notes</a>&nbsp;&nbsp;
+        <a href="../../experiments/"><img height="18px" src="../../img/svg/flask.svg"> experiments</a>&nbsp;&nbsp;
+        <a href="../../etc/"><img height="18px" src="../../img/svg/etc.svg"> etc</a>&nbsp;&nbsp;
+	  </p>
+      <p style="width: 20%; text-align: right">
+        <a href="../../bio/">About <img height="18px" src="../../img/svg/about.svg"></a>
+      </p>
+    </div>
+
+    <div class="wrapper">
+      <panel>
+        <h1>rhoit.com/blog</h1>
+        <p>post it already</p>
+        <p>
+          <span class="glyphicon glyphicon-tags" aria-hidden="true">&nbsp;</span>
+          <a class="tag-list" href="#">#rant #project</a><br>
+        </p>
+      </panel>
+
+      <section>
+        <div id="blog">
+          <div class="blog-tag">2015 Jan 17</div>
+          <div id="blog-content"></div>
+          <hr>
+          <div id="blog-dates">
+            <span>
+              <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+              Last updated on &nbsp;
+              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+              <b>18 Aug 2015</b>
+            </span>
+
+            <span style="float:right">
+              <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+              Published on &nbsp;
+              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+              <b>17 Aug 2015</b>
+            </span>
+          </div>
+        </div>
+        <div id="comment">
+          <br>
+          <div id="disqus_thread"></div>
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          View Page <a href="https://github.com/rhoit/rhoit.github.com/blob/master/blog/001-blog/main.org">Source</a>
+        </p>
+        <p>
+          Powered by <a href="https://github.com/rhoit/bekar-static-gen">bekar-static-gen</a>
+        <p>
+      </footer>
+    </div>
+    <script type="text/javascript" src="../../vendor/highlight/highlight.pack.js"></script>
+    <script type="text/javascript" src="../../vendor/org.js"></script>
+    <script type="text/javascript">
+     function body_load () {
+         var fp = new XMLHttpRequest();
+         var orgParser = new Org.Parser();
+         fp.open('GET', 'main.org', false);
+         fp.send();
+         var docHTML = orgParser.parse(fp.responseText).convert(Org.ConverterHTML, {translateSymbolArrow: true}).toString();
+         document.getElementById("blog-content").innerHTML=docHTML;
+         hljs.initHighlightingOnLoad();
+         document.getElementById("blog-content").getElementsByTagName('p')[3].innerHTML='<center><iframe width="560" height="315" src="https://www.youtube.com/embed/pJUgCzEdx9k" frameborder="0" allowfullscreen></iframe></center>';
+     }
+
+     body_load();
+    </script>
+
+    <script type="text/javascript">
+     var disqus_shortname = 'rhoit';
+
+     (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  </body>
+</html>
