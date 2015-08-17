@@ -6,6 +6,10 @@
     font-size        : 110%;
 }
 
+#blog blockquote, ol, ul {
+    margin           : 0px 25px 10px 45px;
+}
+
 #blog p {
     text-align       : justify;
     margin           : 0px 25px 10px 45px;
