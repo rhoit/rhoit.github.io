@@ -12,7 +12,7 @@ where I decided to create a site. +Strangely+ my first blog, published
 
 * It Begins
 
-  Finally, decided now I should write the *blog*, +itsn't that+ I
+  Finally, decided "Now I should write the *blog*", +itsn't that+ I
   haven't never tried +earlier+, it was never satisfying or it was my
   *incompetence*. Just that web was ~never my thing~. Being brought up
   with *snail modem*, you develop the phobia and just want every thing
@@ -24,10 +24,10 @@ where I decided to create a site. +Strangely+ my first blog, published
   attacked. Only the *emacs* "the master of the text editors" could
   stop them. When the world needed the *mode* it vanished. 100 week
   passed, Me and [[https://github.com/zerOnepal][@zerOnepal]] found the new *repo* called *org-js*. And,
-  although its prendering skill were great, it needs lot to patched
+  although its _pre-ndering_ skill were great, it needs lot to patched
   before it could be used. But I believe *org-js* can save the blog.
 
-  [[avatar.png]]
+  [[avatar.jpe]]
 
 
 ** Static Site Generators
@@ -41,12 +41,12 @@ where I decided to create a site. +Strangely+ my first blog, published
     Transform your plain text into static websites and blogs. Which
     was Simple, Static, Blog-aware, so it said but I remember my time
     with ruby gems! then I had the other thoughts. Few months later I
-    found something called *Octopress*.  A framework designed for
-    Jekyll.
+    found something called *Octopress* jekyll framework. It said
+    framework for hacker, but I wasn't one to figure it out.  But, I
+    did find *Dr. Jekyll and Mr Hyde* and end up watching few episodes
+    of ..
 
-    [[octopress.png]]
-
-    It said framework for hacker, but I wasn't one to figure it out.
+    [[Hydejekyllme.jpg]]
 
 *** Python
 
@@ -109,7 +109,7 @@ where I decided to create a site. +Strangely+ my first blog, published
    HTML!
    #+END_QUOTE
 
-   [[ffffuuu.jpg]]
+   [[ffffuuu.png]]
 
 ** Design
 
@@ -144,6 +144,8 @@ where I decided to create a site. +Strangely+ my first blog, published
    after starting the static-gen project, Then the *Question* was
    should i _abandon_ my project? org-mode is supported. Although it
    halted me for few months, but *org-js*, was just too good.
+
+   [[tesla.jpg]]
 
 * Rebounce!
 
@@ -190,7 +192,9 @@ where I decided to create a site. +Strangely+ my first blog, published
 
 ** bloglob
 
-   Ok, I saw the calendar again, this year is going to end soon, it
-   was the hectic year with earthquake after all. For generator to
-   work, I need the content, my content was like 4 or 5 pages, and
-   generator was still buggy! OK, STOP.. JUST POST IT ALREADY!
+   Ok, I saw the Calendar again, this year is going to end soon, a
+   hectic year with earthquake after all. Although for generator to
+   work, I need the content, for my content I need generator. Then I
+   just *Let it go*!
+
+   [[plane.gif]]
