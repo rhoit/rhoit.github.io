@@ -9,7 +9,8 @@
     <style>
      #blog:hover {
        background: #F1F3FE;
-       box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.5)
+       box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.5);
+       cursor: pointer;
      }
     </style>
 
@@ -38,6 +39,45 @@
       </panel>
 
       <section>
+        <div id="blog" onclick="location.href='002-pyspark'">
+          <div class="blog-tag-flow">2015 Aug 17</div>
+          <div id="blog-content">
+            <h1 class="title">pyspark</h1>
+            <p>
+              After the wave of <a href="http://hadoop.apache.org"">hadoop</a>,
+              <b>Big Data</b> world was set on wild fire by
+              <a href="https://spark.apache.org">apache-spark</a>. Spark
+              was not only fast but also had interface for <b>scala</b>
+              and <b>python</b>. The <b>python api</b>, was only the reason I
+              dived into, Since I can avoid <b>java</b>, or <em>so I
+              thought...</em> Its was encourage to use the vagrant
+              to run <b>spark</b>, but I wasn't the one to do that.
+            </p>
+          </div>
+          <p>
+            <span class="glyphicon glyphicon-tags" aria-hidden="true">&nbsp;</span>
+            <a class="tag-list" href="#">#rant</a>
+            <a class="tag-list" href="#">#archlinux</a>
+            <a class="tag-list" href="#">#hack</a>
+          </p>
+          <hr>
+          <div id="blog-dates">
+            <span>
+              <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+              Last updated on &nbsp;
+              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+              <b>19 Aug 2015</b>
+            </span>
+
+            <span style="float:right">
+              <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+              Published on &nbsp;
+              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+              <b>19 Aug 2015</b>
+            </span>
+          </div>
+        </div>
+        <br>
         <div id="blog" onclick="location.href='001-blog'">
           <div class="blog-tag-flow">2015 Jan 17</div>
           <div id="blog-content">
@@ -55,11 +95,24 @@
             <a class="tag-list" href="#">#rant</a>
             <a class="tag-list" href="#">#project</a>
           </p>
+          <hr>
+          <div id="blog-dates">
+            <span>
+              <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+              Last updated on &nbsp;
+              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+              <b>19 Aug 2015</b>
+            </span>
+
+            <span style="float:right">
+              <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+              Published on &nbsp;
+              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+              <b>17 Aug 2015</b>
+            </span>
+          </div>
 
         </div>
-        <script type="text/javascript">
-         $("#blog").click(
-        </script>
       </section>
 
       <footer>

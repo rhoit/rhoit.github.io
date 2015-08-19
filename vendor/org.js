@@ -1531,7 +1531,7 @@ var Org = (function () {
             ? node.directiveArguments[0]
             : "unknown";
       childText = this.tag("code", childText, {
-        "class": "language-" + codeLanguage
+        "class": "" + codeLanguage
       }, auxData);
       return this.tag("pre", childText, {
         "class": "prettyprint"

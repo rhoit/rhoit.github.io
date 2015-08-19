@@ -1,0 +1,293 @@
+#+TITLE: pyspark
+#+DATE: Monday, Aug 17 2015
+
+#+OPTIONS: toc:0
+#+STARTUP: showall
+
+After the wave of [[http://hadoop.apache.org][hadoop]], *Big Data* world was set on wild fire by
+[[https://spark.apache.org][apache-spark]]. *Spark* was not only fast but also had interface for
+*scala* and *python*. The *python api*, was only the reason I dived
+into, Since I can avoid *java*, or /so I thought.../ Its was encourage
+to use the vagrant to run *spark*, but I wasn't the one to do that.
+
+* le get package
+
+  Arch is pretty darn distro. If there a package you cannot find, they
+  can be found lying around _Arch User Repository_ [ *AUR* ].
+  Unflatteringly sometime its called _Arch Useless Repository_, one of
+  the reason would be while apparent while I was trying to instill
+  *apache-spark 1.3.1*.
+
+  : $ yaourt pyspark
+  : $
+
+  ok,
+
+  : $ yaourt apache spark
+  : 1 aur/apache-spark 1.3.1-1 (0)
+  :   Apache Spark™ is a fast and general engine for large-scale data
+  :   processing.
+  : ==> Enter n° of packages to be installed (ex: 1 2 3 or 1-3)
+  : ==> -------------------------------------------------------
+  : ==> 1
+  : ==> Downloading apache_spark PKGBUILD from AUR...
+  : x .SRCINFO
+  : x PKGBUILD
+  : ...
+  : ..
+  : ( Unsupported package: Potentially dangerous ! )
+
+  so far so good, Its advisable to read *PKGBUILD*, but its like
+  *Terms and Condition*.. you know what I mean.
+
+  : ==> Edit PKGBUILD ? [Y/n] ("A" to abort)
+  : ==> ------------------------------------
+  : ==> n
+  :
+  : ==> apache-spark dependencies:
+  :  - java-environment (already installed)
+  :  - git (already installed)
+
+  its seem like everything dependencies is ok already installed
+
+  : ==> Continue building apache-spark ? [Y/n]
+  : ==> --------------------------------------
+  : ==> y
+
+  just start the game already
+
+  : ==> Building and installing package
+  : ==> Retrieving sources...
+  : ==> Retrieving sources...
+  :   -> Downloading spark-1.3.1.tgz...
+  :   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+  :                                  Dload  Upload   Total   Spent    Left  Speed
+  :   3 8834k    3  293k    0     0  31338      0  0:04:48  0:00:09  0:04:39 31320
+  : ..
+
+  huh, Spark is just around ~9 MB great...
+
+  : ..
+  : ...
+  :     spark-env.sh ... Passed
+  : ==> Extracting sources...
+  :   -> Extracting spark-1.3.1.tgz with bsdtar
+  : ==> Starting prepare()...
+  : ==> Removing existing $pkgdir/ directory...
+  : ==> Starting build()...
+  : OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=512M; support was removed in 8.0
+  : [INFO] Scanning for projects...
+  : Downloading: https://repo1.maven.org/maven2/org/apache/apache/14/apache-14.pom
+  : Downloaded: https://repo1.maven.org/maven2/org/apache/apache/14/apache-14.pom (15 KB at 3.7 KB/sec)
+  : [INFO] ------------------------------------------------------------------------
+  : [INFO] Reactor Build Order:
+  : [INFO]
+  : [INFO] Spark Project Parent POM
+  : [INFO] Spark Project Networking
+  : [INFO] Spark Project Shuffle Streaming Service
+  : [INFO] Spark Project Core
+  : [INFO] Spark Project Bagel
+  : [INFO] Spark Project GraphX
+  : [INFO] Spark Project Streaming
+  : [INFO] Spark Project Catalyst
+  : [INFO] Spark Project SQL
+  : [INFO] Spark Project ML Library
+  : [INFO] Spark Project Tools
+  : [INFO] Spark Project Hive
+  : [INFO] Spark Project REPL
+  : [INFO] Spark Project Assembly
+  : [INFO] Spark Project External Twitter
+  : [INFO] Spark Project External Flume Sink
+  : [INFO] Spark Project External Flume
+  : [INFO] Spark Project External MQTT
+  : [INFO] Spark Project External ZeroMQ
+  : [INFO] Spark Project Examples
+  : [INFO]
+  : [INFO] ------------------------------------------------------------------------
+  : [INFO] Building Spark Project Parent POM 1.3.1
+  : [INFO] ------------------------------------------------------------------------
+  : Downloading: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-remote-resources-plugin/1.5/maven-remote-resources-plugin-1.5.pom
+  : Downloaded: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-remote-resources-plugin/1.5/maven-remote-resources-plugin-1.5.pom (14 KB at 15.6 KB/sec)
+  : ...
+  : ..
+
+  wtf, why its downloading now.
+
+* wtf, who made this
+
+  Strangely, it started downloading all sort of files, when it was in
+  build process, *who does that*. I said let it be. I will just wait
+  and let it built itself, but I was so wrong.. after 30 mins it
+  couldn't download one of the files, then restarted..
+
+** No, I'm not gonna do it again.
+
+   [[sparkdev.png]]
+
+   Restarting the pkg, it started downloading the same file again, its
+   like spark developer making joke at me.  Yup, I *internet* is fast
+   by now days but there is no heck way I'm gonna download everything
+   again.
+
+   I looked at the *PKGBUILD* and found =build()= section
+
+   #+begin_src bash
+     build() {
+       cd "$srcdir/spark-$pkgver"
+
+       export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m"
+       dev/change-version-to-2.11.sh
+       mvn -Dscala-2.11 -DskipTests -Dmaven.repo.local=/tmp clean package
+     }
+   #+end_src
+
+   found that *mvn* is a "/A Java project management and project
+   comprehension tool/" called *maven*. Quickly I navigated to
+   =src/spark-1.3.1/build/mvn=
+
+   : $ grep -n wget src/spark-1.3.1/build/mvn
+   : 38:  # setup `curl` and `wget` silent options if we're running on Jenkins
+   : 40:  local wget_opts=""
+   : 43:    wget_opts="--quiet ${wget_opts}"
+   : 46:    wget_opts="--progress=bar:force ${wget_opts}"
+   : 56:    # if the file still doesn't exist, lets try `wget` and cross our fingers
+   : 57:    [ ! -f "${local_tarball}" ] && [ $(command -v wget) ] && \
+   : 58:      echo "exec: wget ${wget_opts} ${remote_tarball}" && \
+   : 59:      wget ${wget_opts} -O "${local_tarball}" "${remote_tarball}"
+   : 62:      echo -n "ERROR: Cannot download $2 with cURL or wget; " && \
+
+   [[opts-continue.png]]
+
+** how to fix
+
+   it was pretty simple after, editing the =/build/mvn= was fruitless
+   if I was to use *yaourt* or *makepkg*
+
+   Once again I dived into *PKGBUILD* added the wget option.
+
+   #+begin_src shell
+     prepare() {
+       cd "$srcdir/spark-$pkgver"
+       sed -i 's|pid=$SPARK_PID_DIR/spark-$SPARK_IDENT_STRING-$command-$instance.pid|pid=/var/lib/apache-spark/spark-daemon.pid|' sbin/spark-daemon.sh
+       sed -i 's/wget .{wget_opts}/& -c/' build/mvn
+     }
+   #+end_src
+
+   after that it took painful hour to go though hundreds of files and
+   finally it was built and installed.
+
+* Getting it running
+** first run
+
+   What I was expecting to start rite away.
+
+   : $ pyspark
+   : bash: pyspark: command not found
+   : pacman -Ql apache-spark | grep pyspark$
+   : apache-spark /usr/share/apache-spark/bin/pyspark
+
+   ok, found it now.
+
+   : $ /usr/share/apache-spark/bin/pyspark
+   : Python 2.7.10 (default, May 26 2015, 04:16:29)
+   : [GCC 5.1.0] on linux2
+   : Type "help", "copyright", "credits" or "license" for more information.
+   : Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+   : 15/08/17 22:59:02 INFO SparkContext: Running Spark version 1.3.1
+   : 15/08/17 22:59:03 INFO SecurityManager: Changing view acls to: ...
+   : ...
+   : ..
+   : .
+   : 15/08/17 22:59:05 INFO BlockManagerMaster: Registered BlockManager
+   : Welcome to
+   :   ____               __
+   :  / __/__   ___ _____/ /__
+   :  _\ \/ _ \/ _ `/ __/  '_/
+   : /__ / .__/\_,_/_/ /_/\_\   version 1.3.1
+   :    /_/
+   :
+   : Using Python version 2.7.10 (default, May 26 2015 04:16:29)
+   : SparkContext available as sc, SQLContext available as sqlContext.
+   : >>>
+
+   and finally its all ok.
+
+** testing
+
+   : >>> largeRange = sc.parallelize(xrange(100000))
+   : >>> reduceTest = largeRange.reduce(lambda a, b: a + b)
+   : >>> filterReduceTest = largeRange.filter(lambda x: x % 7 == 0).sum()
+   : >>> print reduceTest
+   : 4999950000
+   : >>> print filterReduceTest
+   : 714264285
+
+   ok spark is working!
+
+* i want my notebook
+
+  *pyspark* is no fun without the *notebook*, although, it has the
+  inherent problem, there wasn't much documentation, how to start.
+  One of them was to create the *ipython* profile, which I failed,
+  again leaving me clueless.
+
+** almost there
+
+   I was trying everything form creating alias to making *ipython*
+   profile but accidentally found *pyspark* is the *shell script*
+
+   : $ file /usr/share/apache-spark/bin/pyspark
+   : /usr/share/apache-spark/bin/pyspark: Bourne-Again shell script, ASCII text executable
+
+   looking at the script, there was the eureka moment, all was
+   controlled by the shell environment variable, just seemed this will
+   do the trick.
+
+   #+begin_src shell
+     SPARK_HOME="/usr/share/apache-spark/"
+     IPYTHON_OPTS="notebook"
+   #+end_src
+
+** unseen problem
+
+   This was quite a bit problem, arch has long adopted the *python3*
+   and it package wasn't smart enough to fix it. And incidentally I
+   didn't have *ipython2* installed, to redirect from *pyspark*.
+
+   : pacman -S ipython2-notebook
+   : ipython2 notbook
+   : [I 21:36:46.709 NotebookApp] Using MathJax from CDN: https://cdn.mathjax.org/mathjax/latest/MathJax.js
+   : [I 21:36:46.732 NotebookApp] The port 8888 is already in use, trying another random port.
+   : [I 21:36:46.736 NotebookApp] Serving notebooks from local directory: /tmp/
+   : [I 21:36:46.736 NotebookApp] 0 active kernels
+   : [I 21:36:46.736 NotebookApp] The IPython Notebook is running at: http://localhost:8889/
+   : [I 21:36:46.736 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+
+   installation seems good till here.
+
+   time to change *pyspark* for good seemed like it just controlled by
+   a single variable =PYSPARK_DRIVER_PYTHON=
+
+   #+begin_src bash
+     PYSPARK_DRIVER_PYTHON="ipython2"
+   #+end_src
+
+   : su
+   : sed -i 's/"ipython"/ipython2/g' /usr/share/apache-spark/bin/pyspark
+
+** get it ready
+
+   finally adding everything to  =.bashrc=
+
+   #+begin_src bash
+     export SPARK_HOME="/usr/share/apache-spark/"
+     export IPYTHON_OPTS="notebook"
+     alias pyspark=/usr/share/apache-spark/bin/pyspark
+   #+end_src
+
+* FAQ
+
+  - why didn't you update the PKGBUILD?
+
+    I'm lazy, why don't you make it, now you know how to do it, Who
+    know someone has already done it.

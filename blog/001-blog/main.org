@@ -186,9 +186,10 @@ where I decided to create a site. +Strangely+ my first blog, published
 
   Something intresting happend, I went on to talk at *py-dev meet*,
   and organizer asked me to put the slides up. But, problem was there
-  wasn't I gave that on *emacs* with *org-mode*. I was too lazy when
-  to make one and old dusty projects was just lying in place. Somehow
-  magically it was all done in 2-3 hrs, and it look like [[../../talks/pydev7][this]].
+  wasn't I gave that on *emacs* with *org-mode*. I was too lazy to
+  make one. And the old dusty projects was just lying in some
+  corner. Somehow magically it was all done in 2-3 hrs, and it look
+  like [[../../talks/pydev7][this]].
 
 ** bloglob
 
