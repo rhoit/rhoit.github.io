@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>books</title>
+    <title>bookmark</title>
 
     <style>
      .section-number {
@@ -29,34 +29,24 @@
 
     <div class="wrapper">
       <panel>
-        <h1>rhoit.com/etc</h1>
+        <h1>rhoit.com/etc/…</h1>
         <p>you need to check these out</p>
         <p>
           <span class="glyphicon glyphicon-tags" aria-hidden="true">&nbsp;</span>
-          <a class="tag-list" href="#">#books</a><br>
+          <a class="tag-list" href="#">#links</a><br>
         </p>
       </panel>
 
       <section>
-        <div id="blog">
-          <div id="org-content"></div>
-        </div>
-        <div id="comment">
-          <br>
-          <div id="disqus_thread"></div>
-        </div>
+        <div id="org-content"></div>
       </section>
 
       <footer>
-        <p>
-          View Page <a href="https://github.com/rhoit/rhoit.github.com/blob/master/etc/books/main.org">Source</a>
-        </p>
         <p>
           Powered by <a href="https://github.com/rhoit/bekar-static-gen">bekar-static-gen</a>
         <p>
       </footer>
     </div>
-    <script type="text/javascript" src="../../vendor/highlight/highlight.pack.js"></script>
     <script type="text/javascript" src="../../vendor/org.js"></script>
     <script type="text/javascript">
      function body_load () {
@@ -66,22 +56,9 @@
          fp.send();
          var docHTML = orgParser.parse(fp.responseText).convert(Org.ConverterHTML, {translateSymbolArrow: true}).toString();
          document.getElementById("org-content").innerHTML=docHTML;
-         hljs.initHighlightingOnLoad();
      }
 
      body_load();
     </script>
-
-    <!-- <script type="text/javascript">
-    var disqus_shortname = 'rhoit';
-
-    (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
-
   </body>
 </html>

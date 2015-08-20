@@ -24,8 +24,8 @@
     margin           : 0px;
 }
 
-#blog-content > p:nth-child(3),
-#blog-content > p:nth-child(2) {
+#org-content > p:nth-child(3),
+#org-content > p:nth-child(2) {
     margin           : 0px 25px 10px 10px;
 }
 

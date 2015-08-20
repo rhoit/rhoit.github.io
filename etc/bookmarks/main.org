@@ -1,0 +1,47 @@
+#+TITLE: Bookmarks
+#+DATE: Monday, Aug 03 2015
+#+OPTIONS: num:0 toc:0
+
+* Articles
+
+** Arts and Life
+
+   - [[http://kcd-elements.tumblr.com/][Elements Experiments in Character Design]]
+   - [[http://www.empireonline.com/features/100-greatest-world-cinema-films/default.asp][100 Greatest World Cinema Films]]
+   - [[http://elitedaily.com/women/growing-out-of-friends/1101729/][Growing Out of Friends]]
+
+
+** tech and computers
+
+   - [[http://i.liketightpants.net/and/programmatically-manipulating-typefaces][Programmatically manipulating Typefaces]]
+   - [[http://www.catb.org/esr/faqs/smart-questions.html][How To Ask Questions The Smart Way]]
+   - [[http://archive.wired.com/wired/archive/8.04/joy.html][Why the future doesn't need us]]
+   - [[http://aadrake.com/command-line-tools-can-be-235x-faster-than-your-hadoop-cluster.html][*nix Tool are faster than hadoop]]
+   - [[http://www.brankovukelic.com/2013/01/on-state-of-windows-on-desktop.html][On state of windows on desktop]]
+   - [[www.a1k0n.net/2011/07/20/donut-math.html][donut math]]
+
+** bike
+
+   - [[http://www.davestravelpages.com/presta-valves-and-schrader-valves.html][Presta & Schrader valves]]
+   - [[http://reviews.mtbr.com/take-the-ryan-leech-30-day-wheelie-challenge][30 Day Wheelie Challenge]]
+   - [[http://www.bikerumor.com/2015/08/13/patent-trolling-rotor-application-shows-single-lever-one-way-mechanical-and-hydraulic-shifting/][neat diagrams]]
+
+* Cheatsheet
+
+  - [[http://emacsclub.github.io/html/org_tutorial.html][org-mode Cheetsheets]]
+  - [[http://www.unixguide.net/unix/sedoneliner.shtml][sed oneliner]]
+  - [[http://www.catswhocode.com/blog/19-ffmpeg-commands-for-all-needs][19 ffmpeg commands]]
+
+* Project
+
+  - [[http://www.bfxr.net/][Make sound effects]]
+  - [[http://www.jsbreakouts.org/][Breakout in everything]]
+  - [[www.codeproject.com/Articles/19323/Image-Recognition-with-Neural-Networks][Image-Recognition-with-Neural-Networks]]
+
+# * Web Comics
+
+#   - [[http://www.insertlifehere.net/][insert life here]]
+#   - [[www.phdcomics.com][phd comics]]
+
+# * Books
+#  - [[http://music.columbia.edu/cmc/MusicAndComputers/][Music And Computers]]

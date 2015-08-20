@@ -17,7 +17,6 @@
         <a href="../../"><img height="18px" src="../../img/svg/home.svg"> home</a>&nbsp;&nbsp;
         <a href="../../blog/"><img height="18px" src="../../img/svg/quill.svg"> blog</a>&nbsp;&nbsp;
         <a href="../../notes/"><img height="18px" src="../../img/svg/notes.svg"> notes</a>&nbsp;&nbsp;
-        <a href="../../experiments/"><img height="18px" src="../../img/svg/flask.svg"> experiments</a>&nbsp;&nbsp;
         <a href="../../etc/"><img height="18px" src="../../img/svg/etc.svg"> etc</a>&nbsp;&nbsp;
 	  </p>
       <p style="width: 20%; text-align: right">
@@ -38,7 +37,7 @@
       <section>
         <div id="blog">
           <div class="blog-tag">2015 Jan 17</div>
-          <div id="blog-content"></div>
+          <div id="org-content"></div>
           <hr>
           <div id="blog-dates">
             <span>
@@ -80,9 +79,9 @@
          fp.open('GET', 'main.org', false);
          fp.send();
          var docHTML = orgParser.parse(fp.responseText).convert(Org.ConverterHTML, {translateSymbolArrow: true}).toString();
-         document.getElementById("blog-content").innerHTML=docHTML;
+         document.getElementById("org-content").innerHTML=docHTML;
          hljs.initHighlightingOnLoad();
-         document.getElementById("blog-content").getElementsByTagName('p')[3].innerHTML='<center><iframe width="560" height="315" src="https://www.youtube.com/embed/pJUgCzEdx9k" frameborder="0" allowfullscreen></iframe></center>';
+         document.getElementById("org-content").getElementsByTagName('p')[3].innerHTML='<center><iframe width="560" height="315" src="https://www.youtube.com/embed/pJUgCzEdx9k" frameborder="0" allowfullscreen></iframe></center>';
      }
 
      body_load();
