@@ -1,15 +1,15 @@
 #+TITLE: Bookmarks
 #+DATE: Monday, Aug 03 2015
 #+OPTIONS: num:0 toc:0
+#+STARTUP: overview
 
 * Articles
 
-** Arts and Life
+** arts and life
 
    - [[http://kcd-elements.tumblr.com/][Elements Experiments in Character Design]]
    - [[http://www.empireonline.com/features/100-greatest-world-cinema-films/default.asp][100 Greatest World Cinema Films]]
    - [[http://elitedaily.com/women/growing-out-of-friends/1101729/][Growing Out of Friends]]
-
 
 ** tech and computers
 

@@ -123,13 +123,8 @@ footer {
     bottom          : 50px;
 }
 
-
 pre, code {
     font-family     : Consolas, "Liberation Mono", Menlo, Courier, monospace;
-}
-
-pre {
-    margin          : 0px 25px 10px;
 }
 
 @media print, screen and (max-width: 960px) {

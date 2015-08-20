@@ -1,32 +1,57 @@
 #blog {
-    padding          : 10px;
+    padding          : 0px 25px 10px 50px;
     overflow         : auto;
     background       : white;
-    box-shadow       : 0px 0px 6px rgba(0,0,0,0.3);
+    box-shadow       : 2px 0px 6px rgba(0,0,0,0.3);
     font-size        : 105%;
 }
 
-#blog blockquote, ol, ul {
-    margin           : 0px 25px 10px 45px;
+#blog h1, h2, h3, h4, h5, h6, hr {
+    margin-left      : -35px;
+}
+
+#blog-tag {
+    background       : #3737F5;
+    border-radius    : 15px 14px 0px 0px;
+    box-shadow       : 0px 0px 6px rgba(0,0,0,0.3);
+    color            : white;
+    font-weight      : bold;
+    padding          : 8px 0px 5px;
+    position         : relative;
+    text-align       : center;
+    top              : 120px;
+    transform        : rotate(90deg);
+    width            : 160px;
+    left             : 90%;
+}
+
+#blog-dates {
+    margin           : -10px 0px 0px -30px
+}
+
+
+#blog td, th {
+    padding-right    : 50px;
+}
+
+
+#blog th {
+    border-bottom    : 1px solid #E5E5E5;
 }
 
 #blog p {
     text-align       : justify;
-    margin           : 0px 25px 10px 45px;
 }
 
-#blog-dates {
-    margin           : 0px 25px 10px 0px;
-}
 
 #blog li p,
 #blog blockquote p {
-    margin           : 0px;
+    margin-left      : 0px;
 }
 
 #org-content > p:nth-child(3),
 #org-content > p:nth-child(2) {
-    margin           : 0px 25px 10px 10px;
+    margin-left           : -30px;
 }
 
 #blog p img {
@@ -34,16 +59,10 @@
     display          : block
 }
 
-
-#blog pre {
-    margin          : 0px 25px 10px 45px;
-}
-
-
 #blog pre.prettyprint {
-    background      : #3f3f3f;
-    border          : 0px solid #3f3fff;
-    padding         : 17px 0px 0px 0px;
+    background       : #3f3f3f;
+    border           : 0px solid #3f3fff;
+    padding          : 17px 0px 0px 0px;
 }
 
 
