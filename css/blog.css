@@ -19,10 +19,12 @@ section {
     padding          : 8px 0px 5px;
     position         : absolute;
     text-align       : center;
-    top              : 120px;
+    top              : 100px;
     transform        : rotate(90deg);
     width            : 180px;
-    right            : -106.5px;
+    right            : -107px;
+    font-size        : 100%;
+    z-index          : -1;
 }
 
 
@@ -53,15 +55,21 @@ section {
 #blog h1, h2, h3, h4, h5, h6, hr,
 #org-content > p:nth-child(3),
 #org-content > p:nth-child(2) {
-    margin-left           : -35px;
+    margin-left      : -35px;
 }
 
 @media print, screen and (max-width: 960px) {
     #blog-tag {
         transform    : rotate(0deg);
-        top          : 0px;
+        top          : 20px;
         left         : 0px;
     }
+
+    #blog {
+        margin-top      : 35px;
+    }
+
+
 }
 
 @media print, screen and (max-width: 480px) {
@@ -76,7 +84,7 @@ section {
     }
 }
 
-#bolg p iframe,
+#blog p iframe,
 #blog p img {
     margin           : 0px auto;
     display          : block;
