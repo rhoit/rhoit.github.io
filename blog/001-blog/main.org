@@ -19,13 +19,14 @@ where I decided to create a site. +Strangely+ my first blog, published
   on your *localhost*.
 
   During my undergrad years I forced on +myself+ to learn *LateX*,
-  they said I was +cool+, now you can compile your documents like your
-  *code*! Then, everything changed when *README.md renderer*
+  they said It was +cool+, now you can compile your documents like
+  your *code*! Then, everything changed when *README.md renderer*
   attacked. Only the *emacs* "the master of the text editors" could
   stop them. When the world needed the *mode* it vanished. 100 week
   passed, Me and [[https://github.com/zerOnepal][@zerOnepal]] found the new *repo* called *org-js*. And,
-  although its _pre-ndering_ skill were great, it needs lot to patched
-  before it could be used. But I believe *org-js* can save the blog.
+  although its _pre-ndering_ skills were great, it needs lot to
+  *patched*, before it could be used.I believe *org-js* can save
+  the blog.
 
   [[avatar.jpe]]
 
@@ -34,17 +35,17 @@ where I decided to create a site. +Strangely+ my first blog, published
 
    I started typing few lines, thought ahead … It would be too hard to
    manage all this pages, then found about *static web-page
-   generator*. Here are few of them I tried.
+   generator*. Here are few of them that I tried.
 
 *** jekyll
 
     Transform your plain text into static websites and blogs. Which
-    was Simple, Static, Blog-aware, so it said but I remember my time
-    with ruby gems! then I had the other thoughts. Few months later I
-    found something called *Octopress* jekyll framework. It said
-    framework for hacker, but I wasn't one to figure it out.  But, I
-    did find *Dr. Jekyll and Mr Hyde* and end up watching few episodes
-    of ..
+    was *Simple*, *Static*, *Blog-aware*, so it said but I remember my
+    time with ruby gems! then I had the other thoughts. Few months
+    later I found something called *Octopress* jekyll framework. It
+    said framework for hackers, but I wasn't one to figure it out.
+    But, I did find *Dr. Jekyll and Mr Hyde* and end up watching few
+    episodes of
 
     [[Hydejekyllme.jpg]]
 
@@ -62,8 +63,9 @@ where I decided to create a site. +Strangely+ my first blog, published
   Stop! Stop it, before I start hating everything.
   #+END_QUOTE
 
-  Then, As the +good+ programmer, jotted down what I wanted aka *requirements*.
-    - uses thing i know
+  Then, As a +good+ programmer, jotted down what I wanted aka
+  *requirements:*
+    - uses things i know
     - minimum learning
     - not too much installation
     - markup support
@@ -78,7 +80,7 @@ where I decided to create a site. +Strangely+ my first blog, published
     *bash*, I should do it *bash*!
   #+END_QUOTE
 
-  The the +smart+ brain said someone might have already done it. And,
+  Then the +smart+ brain said someone might have already done it. And,
   it was rite. After few mins of googling, [[https://www.staticgen.com/]]
   popped up. /A leaderboard of the top open-source static site
   generators/.
@@ -86,17 +88,17 @@ where I decided to create a site. +Strangely+ my first blog, published
 
 ** Ok Wait!
 
-   These all generators are great but they only support *Markdown*, It
-   has been a while I have been writing on *org-mode*.
+   These all generators are *great* but, they only support *Markdown*,
+   It has been a while, I have been writing in *org-mode*.
 
    #+BEGIN_QUOTE
-     Hey can *Org-mode* do that?
+     Hey! can *Org-mode* do that?
    #+END_QUOTE
 
    It been +long+ I haven't over-engineered. Thought of doing it with
    *emacs* then checked my requirement list.
 
-    - [X] uses thing i know
+    - [X] uses things i know
     - [X] minimum learning
     - [ ] not too much installation
     - [X] markup support
@@ -105,27 +107,29 @@ where I decided to create a site. +Strangely+ my first blog, published
    *elegant* and *sleek*... until [[https://github.com/zerOnepal][@zerOnepal]] was back again!
 
    #+BEGIN_QUOTE
-   Hey check this out [[https://github.com/mooz/org-js/][org-js]] which does directly renders the stuff into
-   HTML!
+   Hey check this out, this thing called [[https://github.com/mooz/org-js/][org-js]] directly renders the
+   stuff into HTML!
    #+END_QUOTE
 
    [[ffffuuu.png]]
 
 ** Design
 
-   Template confuses me rather than help me, back in days I had wrote
-   fair share of css, just that it was long time ago, I couldn't
-   remember a thing. One way or another I had to start, many time I
-   had been told to use the twitter *bootstrap*. When I did *myTheme*
-   with 100 lines of css disappeared into nothingness..  and .. few
+   Most of the times, *Template* are meant for help, but I was more
+   confused from them. Back in the days, I wrote fair share of css,
+   just that it was long time ago, I couldn't remember a thing. One
+   way or another I had to start, many times I had been told to use
+   the twitter *bootstrap*. When I added *bootstrap*, *myTheme* with
+   100 lines of *css* disappeared into nothingness..  and .. few
    moments later .. /scroll/, /scrOll/, /SCROLL/, =Ctrl + C= and
    =Ctrl + V=.  Let's say that day *I got lots of inspiration*!
 
 ** Mozrepl
 
    One of the chief reason, I didn't like web-development was just
-   because it didn't have *Makefile*! I have switching constantly with
-   editor and browser with streams =F5= made me irritated, which means
+   because it didn't have *Makefile*! I had to switch constantly
+   between editor and browser with constant streams of =F5=. Which
+   made me irritated, *in a nutshell:*
 
    - [X] make changes
    - [X] Save
@@ -133,28 +137,32 @@ where I decided to create a site. +Strangely+ my first blog, published
    - [ ] Refresh
    - [ ] Switch to Editor
 
-   Which is strongly felt last 3 could be avoided. Luckily I found
-   youtube channel *emacs rocks* where they showed live markdown
-   render which has always eluded me with the possibility. Not long
-   after that it was =el-get-install<RET>moz-repl<RET>=.
+   Which I strongly felt, last 3 step could be avoided. Luckily I
+   found *mozrepl*. Not long, after that it was
+   =el-get-install<RET>moz-repl<RET>=.
 
 ** Nikola
 
-   Nicola http://getnikola.com/ was something I found some time later
-   after starting the static-gen project, Then the *Question* was
-   should i _abandon_ my project? org-mode is supported. Although it
-   halted me for few months, but *org-js*, was just too good.
+   After starting the *static-gen* project, I found the wizard, Nicola
+   http://getnikola.com/, then A *Question* came up.
+
+   #+BEGIN_QUOTE
+   Should I _abandon_ my project? org-mode is supported.
+   #+END_QUOTE
+
+   Although it halted me for few months, but *org-js*, was just too
+   good.
 
    [[tesla.jpg]]
 
 * Rebounce!
 
-  In the process to create the site, I did the thing with I despised
+  In the process to create the site, I did the things which I despised
   earlier something I have never tried...
 
 ** bootstrap & jekyll
 
-   Ok let check it out what this jekyll it was I hold my girt, kick my
+   Lets check it out, what this *jekyll* is. I held my girt, kicked my
    block head.. any way *bootstrap* uses it....
 
    #+BEGIN_SRC python
@@ -177,25 +185,22 @@ where I decided to create a site. +Strangely+ my first blog, published
 
 ** Redesign
 
-   Months passed, I hadn't touch the project, Since, I made the
-   initial design, started writing some stuff since I need some
-   content.I made some samples and edited images, and was stuck with
-   some issue, which I couldn't solve.
+   Months passed, I hadn't touch the project.
 
 * Reboot
 
-  Something intresting happend, I went on to talk at *py-dev meet*,
-  and organizer asked me to put the slides up. But, problem was there
-  wasn't I gave that on *emacs* with *org-mode*. I was too lazy to
-  make one. And the old dusty projects was just lying in some
-  corner. Somehow magically it was all done in 2-3 hrs, and it look
+  Something interesting happend, I went on to talk at *py-dev meet*,
+  and organizer asked me to put the slides up, but the problem was
+  there wasn't any. I gave that on *emacs* with *org-mode*. I was too
+  lazy to make one. And the old dusty project was just lying in some
+  corner. Somehow magically it was all done in 2-3 hrs, and it lookedx
   like [[../../talks/pydev7][this]].
 
 ** bloglob
 
    Ok, I saw the Calendar again, this year is going to end soon, a
    hectic year with earthquake after all. Although for generator to
-   work, I need the content, for my content I need generator. Then I
-   just *Let it go*!
+   work, I needed the content, for my content I needed generator. Then
+   I just *Let it go*!
 
    [[plane.gif]]

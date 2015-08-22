@@ -7,16 +7,17 @@
 After the wave of [[http://hadoop.apache.org][hadoop]], *Big Data* world was set on wild fire by
 [[https://spark.apache.org][apache-spark]]. *Spark* was not only fast but also had interface for
 *scala* and *python*. The *python api*, was only the reason I dived
-into, Since I can avoid *java*, or /so I thought.../ Its was encourage
-to use the vagrant to run *spark*, but I wasn't the one to do that.
+into, Since I can avoid *java*, or /so I thought.../. I was told to
+use the *vagrant* for using *spark*, but I wasn't the one to do that.
 
 * le get package
 
-  Arch is pretty darn distro. If there a package you cannot find, they
-  can be found lying around _Arch User Repository_ [ *AUR* ].
+  Arch is pretty darn distro. If there is any package you cannot find
+  with pacman, they can be found lying around _Arch User Repository_ [
+  *AUR* ]. Mostly use with yaourt system which is also in *AUR*.
   Unflatteringly sometime its called _Arch Useless Repository_, one of
-  the reason would be while apparent while I was trying to instill
-  *apache-spark 1.3.1*.
+  the reason would be while I was trying to install *apache-spark
+  1.3.1*.
 
   : $ yaourt pyspark
   : $
@@ -48,13 +49,16 @@ to use the vagrant to run *spark*, but I wasn't the one to do that.
   :  - java-environment (already installed)
   :  - git (already installed)
 
-  its seem like everything dependencies is ok already installed
+  it seems like every dependencies are already installed.
 
   : ==> Continue building apache-spark ? [Y/n]
   : ==> --------------------------------------
   : ==> y
 
-  just start the game already
+  #+BEGIN_QUOTE
+  Just start the game already.
+  #+END_QUOTE
+
 
   : ==> Building and installing package
   : ==> Retrieving sources...
@@ -65,7 +69,9 @@ to use the vagrant to run *spark*, but I wasn't the one to do that.
   :   3 8834k    3  293k    0     0  31338      0  0:04:48  0:00:09  0:04:39 31320
   : ..
 
-  huh, Spark is just around ~9 MB great...
+  #+BEGIN_QUOTE
+  huh, Spark is just around ~9 MB, Great!!...
+  #+END_QUOTE
 
   : ..
   : ...
@@ -116,18 +122,21 @@ to use the vagrant to run *spark*, but I wasn't the one to do that.
 * wtf, who made this
 
   Strangely, it started downloading all sort of files, when it was in
-  build process, *who does that*. I said let it be. I will just wait
-  and let it built itself, but I was so wrong.. after 30 mins it
-  couldn't download one of the files, then restarted..
+  build process, *who does that*? I said let it be. I will just wait
+  and let it build, but I was so wrong.. after _30 mins_ or so,
+  something failed to download.
 
 ** No, I'm not gonna do it again.
 
    [[sparkdev.png]]
 
-   Restarting the pkg, it started downloading the same file again, its
-   like spark developer making joke at me.  Yup, I *internet* is fast
-   by now days but there is no heck way I'm gonna download everything
-   again.
+   Restarting the build proces. It _re-downloaded_ the same files yet
+   again. It was like spark developer making joke out of me.
+
+   #+BEGIN_QUOTE
+   Yup, *internet* is fast now days but there is no heck way I'm
+   gonna *download* everything again.
+   #+END_QUOTE
 
    I looked at the *PKGBUILD* and found =build()= section
 
@@ -141,7 +150,7 @@ to use the vagrant to run *spark*, but I wasn't the one to do that.
      }
    #+end_src
 
-   found that *mvn* is a "/A Java project management and project
+   Found that *mvn* was "/A Java project management and project
    comprehension tool/" called *maven*. Quickly I navigated to
    =src/spark-1.3.1/build/mvn=
 
@@ -160,10 +169,11 @@ to use the vagrant to run *spark*, but I wasn't the one to do that.
 
 ** how to fix
 
-   it was pretty simple after, editing the =/build/mvn= was fruitless
-   if I was to use *yaourt* or *makepkg*
+   It was easy after I spotted the problem in =/build/mvn=, but
+   editing it was fruitless, Since, I was using *yaourt* or *makepkg*
 
-   Once again I dived into *PKGBUILD* added the wget option.
+   Once again, I opened *PKGBUILD* and wrote the =sed= to add =-c= in
+   wget_opts, which continued the download.
 
    #+begin_src shell
      prepare() {
@@ -173,13 +183,13 @@ to use the vagrant to run *spark*, but I wasn't the one to do that.
      }
    #+end_src
 
-   after that it took painful hour to go though hundreds of files and
-   finally it was built and installed.
+   It took few painful hours to go through hundreds of files and
+   finally it was *build* and *installed*.
 
 * Getting it running
 ** first run
 
-   What I was expecting to start rite away.
+   What I was expecting to start, just like that
 
    : $ pyspark
    : bash: pyspark: command not found
@@ -227,21 +237,21 @@ to use the vagrant to run *spark*, but I wasn't the one to do that.
 * i want my notebook
 
   *pyspark* is no fun without the *notebook*, although, it has the
-  inherent problem, there wasn't much documentation, how to start.
-  One of them was to create the *ipython* profile, which I failed,
-  again leaving me clueless.
+   problem of not finding the suitable documentation, "How to start".
+   One of them was to create the *ipython* profile, which I failed,
+   leaving me clueless once again.
 
 ** almost there
 
-   I was trying everything form creating alias to making *ipython*
-   profile but accidentally found *pyspark* is the *shell script*
+   I was trying everything from creating alias to making *ipython*
+   profile but accidentally found *pyspark* is a *shell script*
 
    : $ file /usr/share/apache-spark/bin/pyspark
    : /usr/share/apache-spark/bin/pyspark: Bourne-Again shell script, ASCII text executable
 
-   looking at the script, there was the eureka moment, all was
-   controlled by the shell environment variable, just seemed this will
-   do the trick.
+   looking at the script, there was a *eureka* moment, everthing was
+   controlled by the *shell environment variable*, just seemed this
+   will do the trick.
 
    #+begin_src shell
      SPARK_HOME="/usr/share/apache-spark/"
@@ -250,9 +260,10 @@ to use the vagrant to run *spark*, but I wasn't the one to do that.
 
 ** unseen problem
 
-   This was quite a bit problem, arch has long adopted the *python3*
-   and it package wasn't smart enough to fix it. And incidentally I
-   didn't have *ipython2* installed, to redirect from *pyspark*.
+   This was quite a bit of problem, *Arch* has long back adopted the
+   *python3* as the default *python* and its aur package wasn't smart
+   enough to fix it. And incidentally I didn't have *ipython2*
+   installed, to redirect from *pyspark*.
 
    : pacman -S ipython2-notebook
    : ipython2 notbook
@@ -263,10 +274,10 @@ to use the vagrant to run *spark*, but I wasn't the one to do that.
    : [I 21:36:46.736 NotebookApp] The IPython Notebook is running at: http://localhost:8889/
    : [I 21:36:46.736 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 
-   installation seems good till here.
+   installation seems good till here. :)
 
-   time to change *pyspark* for good seemed like it just controlled by
-   a single variable =PYSPARK_DRIVER_PYTHON=
+   Luckily, there was only a single variable in *pyspark* to control
+   the switch.
 
    #+begin_src bash
      PYSPARK_DRIVER_PYTHON="ipython2"
@@ -277,7 +288,7 @@ to use the vagrant to run *spark*, but I wasn't the one to do that.
 
 ** get it ready
 
-   finally adding everything to  =.bashrc=
+   Finally Added everything to =.bashrc=
 
    #+begin_src bash
      export SPARK_HOME="/usr/share/apache-spark/"
@@ -289,5 +300,8 @@ to use the vagrant to run *spark*, but I wasn't the one to do that.
 
   - why didn't you update the PKGBUILD?
 
-    I'm lazy, why don't you make it, now you know how to do it, Who
-    know someone has already done it.
+    I'm lazy, why don't you make it, now you know how to do it,
+
+    #+begin_quote
+    Who knows, someone has already done it!
+    #+end_quote
