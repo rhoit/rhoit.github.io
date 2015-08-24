@@ -52,16 +52,14 @@
     </div>
     <script type="text/javascript" src="../../vendor/org.js"></script>
     <script type="text/javascript">
-     function body_load () {
+     (function () {
          var fp = new XMLHttpRequest();
          var orgParser = new Org.Parser();
          fp.open('GET', 'main.org', false);
          fp.send();
          var docHTML = orgParser.parse(fp.responseText).convert(Org.ConverterHTML, {translateSymbolArrow: true}).toString();
-         document.getElementById("org-content").innerHTML=docHTML;
-     }
-
-     body_load();
+         document.getElementById("org-content").innerHTML = docHTML;
+     })();
     </script>
   </body>
 </html>

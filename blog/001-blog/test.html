@@ -25,18 +25,34 @@
 
     <div class="wrapper">
       <panel>
-        <h1>rhoit.com/talks</h1>
-        <p>py meet #7</p>
+        <h1>rhoit.com/blog</h1>
+        <p>post it already</p>
         <p>
           <span class="glyphicon glyphicon-tags" aria-hidden="true">&nbsp;</span>
-          <a class="tag-list" href="#">#python #code</a><br>
+          <a class="tag-list" href="#">#rant #project</a><br>
         </p>
       </panel>
 
       <section>
         <div id="blog">
-          <div id="blog-tag">2015 Aug 02</div>
+          <div id="blog-tag">2015 Jan 17</div>
           <div id="org-content"></div>
+          <hr>
+          <div id="blog-dates">
+            <span>
+              <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+              Last updated on &nbsp;
+              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+              <b>18 Aug 2015</b>
+            </span>
+
+            <span style="float:right">
+              <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+              Published on &nbsp;
+              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+              <b>17 Aug 2015</b>
+            </span>
+          </div>
         </div>
         <div id="comment">
           <br>
@@ -46,7 +62,7 @@
 
       <footer>
         <p>
-          View Page <a href="https://github.com/rhoit/rhoit.github.com/blob/master/talks/pydev7/main.org">Source</a>
+          View Page <a href="https://github.com/rhoit/rhoit.github.com/blob/master/blog/001-blog/main.org">Source</a>
         </p>
         <p>
           Powered by <a href="https://github.com/rhoit/bekar-static-gen">bekar-static-gen</a>
@@ -55,6 +71,18 @@
     </div>
     <link rel="stylesheet" href="../../vendor/highlight/css/zenburn.css">
     <script type="text/javascript" src="../../vendor/highlight/highlight.pack.js"></script>
+
+    <script src="../../vendor/jquery/2.1.4/jquery.min.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="../../vendor/inlineDisqussions/inlineDisqussions.css">
+    <script src="../../vendor/inlineDisqussions/inlineDisqussions.js"></script>
+    <script>
+     disqus_shortname = 'rhoit';
+     jQuery(document).ready(function() {
+         jQuery("#blog p").inlineDisqussions();
+     });
+    </script>
+
     <script type="text/javascript" src="../../vendor/org.js"></script>
     <script type="text/javascript">
      (function () {
@@ -63,16 +91,8 @@
          fp.open('GET', 'main.org', false);
          fp.send();
          var docHTML = orgParser.parse(fp.responseText).convert(Org.ConverterHTML, {translateSymbolArrow: true}).toString();
-         document.getElementById("org-content").innerHTML=docHTML;
+         document.getElementById("org-content").innerHTML = docHTML;
          hljs.initHighlightingOnLoad();
-     })();
-    </script>
-
-    <script type="text/javascript">
-     (function () {
-         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-         dsq.src = '//rhoit.disqus.com/embed.js';
-         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
      })();
     </script>
   </body>

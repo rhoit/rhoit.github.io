@@ -7,7 +7,6 @@
     <title>lets blog again</title>
 
     <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../vendor/highlight/css/zenburn.css">
     <link rel="stylesheet" href="../../css/bekar.css">
     <link rel="stylesheet" href="../../css/blog.css">
   </head>
@@ -70,33 +69,29 @@
         <p>
       </footer>
     </div>
+    <link rel="stylesheet" href="../../vendor/highlight/css/zenburn.css">
     <script type="text/javascript" src="../../vendor/highlight/highlight.pack.js"></script>
+
     <script type="text/javascript" src="../../vendor/org.js"></script>
     <script type="text/javascript">
-     function body_load () {
+     (function () {
          var fp = new XMLHttpRequest();
          var orgParser = new Org.Parser();
          fp.open('GET', 'main.org', false);
          fp.send();
          var docHTML = orgParser.parse(fp.responseText).convert(Org.ConverterHTML, {translateSymbolArrow: true}).toString();
-         document.getElementById("org-content").innerHTML=docHTML;
+         document.getElementById("org-content").innerHTML = docHTML;
          hljs.initHighlightingOnLoad();
          document.getElementById("org-content").getElementsByTagName('p')[3].innerHTML='<center><iframe width="560" height="315" src="https://www.youtube.com/embed/pJUgCzEdx9k" frameborder="0" allowfullscreen></iframe></center>';
-     }
-
-     body_load();
+     })();
     </script>
 
     <script type="text/javascript">
-     var disqus_shortname = 'rhoit';
-
      (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         dsq.src = '//rhoit.disqus.com/embed.js';
          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
      })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
   </body>
 </html>

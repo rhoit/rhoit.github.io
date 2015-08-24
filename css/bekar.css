@@ -14,6 +14,7 @@
 
 body {
     padding         : 50px;
+    margin-right    : 15px;
     font-size       : 15px;
     background      : url("../img/symphony.png") fixed;
 }
@@ -103,7 +104,7 @@ section {
     width           : 70%;
     float           : right;
     margin          : 0;
-    padding-bottom  : 50px;
+    padding-bottom  : 100px;
 }
 
 small {
@@ -122,6 +123,7 @@ footer {
     float           : left;
     position        : fixed;
     bottom          : 50px;
+    z-index         : -1;
 }
 
 pre, code {

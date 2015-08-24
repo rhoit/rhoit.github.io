@@ -1,5 +1,5 @@
 .disqussion {
-    padding               : 4.5px 0px 0px 3.5px;
+    padding               : 5px 10px 10px;
     position              : absolute;
     top                   : 0;
     left                  : 0;
@@ -36,11 +36,11 @@
     opacity               : .8;
 }
 
-.disqussion-contain:hover .disqussion a {
+.disqussion-contain :hover .disqussion a {
     opacity               : 1;
 }
 
-.disqussion a:after {
+.disqussion a :after {
     border-left           : 7px solid transparent;
     border-top            : 7px solid #bbbbbb;
     left                  : 19px;
@@ -56,12 +56,12 @@
     transition            : all 0.5s;
 }
 
-.disqussion:hover a, .disqussion.hovered a {
+.disqussion :hover a, .disqussion.hovered a {
     opacity               : 1;
-    background            : #999999;
+    /* background            : #999999; */
 }
 
-.disqussion:hover a:after, .disqussion.hovered a:after {
+.disqussion :hover a:after, .disqussion.hovered a:after {
     border-top-color      : #999999;
 }
 
@@ -74,15 +74,16 @@
 #disqus_thread.positioned {
     position              : absolute;
     top                   : 0;
-    left                  : 0;
-    padding               : 5px 15px 0 15px;
     -webkit-box-sizing    : border-box;
     -moz-box-sizing       : border-box;
     box-sizing            : border-box;
+    margin-top            : -64px;
+    margin-left           : -410px;
+    width                 : 55% !important;
+    padding-right         : 43px;
 }
 
 .disqussion-highlight #disqus_thread.positioned {
-    background            : #fff;
     z-index               : 9;
 }
 

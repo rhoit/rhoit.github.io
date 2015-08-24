@@ -28,7 +28,7 @@ where I decided to create a site. +Strangely+ my first blog, published
   *patched*, before it could be used.I believe *org-js* can save
   the blog.
 
-  [[avatar.jpe]]
+  [[avatar.jpg]]
 
 
 ** Static Site Generators
