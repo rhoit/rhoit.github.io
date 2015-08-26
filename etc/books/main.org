@@ -3,29 +3,39 @@
 #+OPTIONS: toc:0 num:0
 #+STARTUP: showall
 
-- Amy Chua — *Battle Hymn of the Tiger Mother*
-- Peggy Orenstein — *Cinderella Ate My Daughter*
-- Perl S. Buck — *Good Earth*
-- Issac Asimov, *Foundation* Series
-  - I, Robot
-  - Caves of Steel
-  - The Naked Sun
-  - The Robots of Dawn
-  - Robots and Empire
-  - The Currents of Space
-  - The Stars, Like Dust
-  - Pebble in the Sky
-  - Prelude to Foundation
-  - Forward the Foundation
-  - Foundation
-  - Foundation and Empire
-  - Second Foundation
-  - Foundation's Edge
-  - Foundation and Earth
-- Suzanne Collins, *Hunger Games* Series
-  - The Hunger Games
-  - Catching Fire
-  - Mockingjay
-- George R. R. Martin, *A Song of Ice and Fire* Series
-  - A Game of Thrones
-  - A Clash of Kings
+* Computing
+
+  - Eric S. Raymond  — *The Art of Unix Programming*
+  - Simson L. Garfinkel — *The UNIX Hater's Handbook*
+  - Paul Graham — *Hackers & Painters*: Big Ideas From the Computer
+    Age
+
+* Literature
+
+  - Amy Chua — *Battle Hymn of the Tiger Mother*
+  - Peggy Orenstein — *Cinderella Ate My Daughter*
+  - Perl S. Buck — *Good Earth*
+  - Elizabeth Enslin — *While the Gods Were Sleeping*
+  - Issac Asimov, *Foundation* Series
+    - I, Robot
+    - Caves of Steel
+    - The Naked Sun
+    - The Robots of Dawn
+    - Robots and Empire
+    - The Currents of Space
+    - The Stars, Like Dust
+    - Pebble in the Sky
+    - Prelude to Foundation
+    - Forward the Foundation
+    - Foundation
+    - Foundation and Empire
+    - Second Foundation
+    - Foundation's Edge
+    - Foundation and Earth
+  - Suzanne Collins, *Hunger Games* Series
+    - The Hunger Games
+    - Catching Fire
+    - Mockingjay
+  - George R. R. Martin, *A Song of Ice and Fire* Series
+    - A Game of Thrones
+    - A Clash of Kings
