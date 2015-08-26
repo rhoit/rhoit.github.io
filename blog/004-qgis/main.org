@@ -1,0 +1,257 @@
+#+TITLE: qgis
+#+DATE: Tuesday, Aug 25 2015
+
+#+OPTIONS: toc:0
+#+STARTUP: showall
+
+It was year *2012-2013* I got my hand on *3D-model* data of
+*University*, and the idea popped up.. /Why not we play *games* on
+it?/, *NFS*, *CS*... only problem was map was in =GIS=. Looking back
+now *games* I +wrote+ till date only runs on [[https://github.com/rhoit/2048][terminal]], is definitely a
++good+ start, but when I'm done it would be *awesome*.
+
+* le get package
+
+  Back, then I tried installing =grass gis= on *archlinux*. Scene was
+  not pretty then, lets see what happens this time, This time I had to
+  get this =qgis= thing before,
+
+  : $ yaourt qgis
+  : 1 aur/horao-git 0-2 (3)
+  :     Oslandia's 3D visualisation stack with QGIS plugin
+  : 2 aur/qgis 2.10-2 (130)
+  :     QGIS (current release) is a Geographic Information System (GIS) that
+  :     supports vector, raster & database formats
+  : 3 aur/qgis-git 2.11-2 (1)
+  :     QGIS (master) is a Geographic Information System (GIS) that supports
+  :     vector, raster & database formats
+  : 4 aur/qgis-ltr 2.8-2 (1)
+  :     QGIS (long-term release) is a Geographic Information System (GIS) that
+  :     supports vector, raster & database formats
+  : ==>  Enter n° of packages to be installed (ex: 1 2 3 or 1-3)
+  : ==> -------------------------------------------------------
+  : ==>
+
+  *3 aur/qgis-git* is what I need its /latest version/.
+
+  : ==> 3
+  : ==> Downloading apache_spark PKGBUILD from AUR...
+  : x .SRCINFO
+  : x PKGBUILD
+  : ...
+  : ..
+  : ( Unsupported package: Potentially dangerous ! )
+  : ==> Edit PKGBUILD ? [Y/n] ("A" to abort)
+  : ==> ------------------------------------
+  : ==> n
+  : .
+  : ...
+  :  - bison (already installed)
+  :  - txt2tags (already installed)
+  :  - perl (already installed)
+  :  - git (already installed)
+  :  - python2-pyqt4 (package found)
+  :  - python2-qscintilla (package found)
+  :  - python2-httplib2 (package found)
+  :
+  : ==> Edit qgis-git.install ? [Y/n] ("A" to abort)
+  : ==> --------------------------------------------
+  : ==> n
+  :
+  : ==> Continue building qgis-git ? [Y/n]
+  : ==> --------------------------------------
+  : ==> y
+  : ==> Building and installing package
+  : ==> Install or build missing dependencies for qgis-git:
+  : ...
+
+  resolving the dependencies, finally getting the source
+
+  : ==> Making package: qgis-git 2.11-2 (Wed Aug 26 07:43:48 NPT 2015)
+  : ==> Checking runtime dependencies...
+  : ==> Checking buildtime dependencies...
+  : ==> Retrieving sources...
+  :   -> Cloning qgis git repo...
+  : Cloning into bare repository '/path/to/packages/devel/qgis-git/qgis'...
+  : remote: Counting objects: 328530, done.
+  : remote: Compressing objects: 100% (336/336),
+  : Receiving objects:  20% (66454/328530), 102.71 MiB | 27.00 KiB/s
+
+  Its taking too much time, *STOP* it. There must be better way to do
+  this. There is and I know it! :D
+
+** Bridge Over shallow waters
+
+   One doesn't need the *history* of /development/ for getting latest
+   version of software. This might save you someday, Since
+
+   [[shallow.jpeg]]
+
+   #+begin_quote
+   I haven't found the =git clone= resume mechanism just yet.
+   #+end_quote
+
+   : $ git clone git://github.com/qgis/QGIS.git --bare --depth=1
+   : Cloning into bare repository 'QGIS.git'...
+   : remote: Counting objects: 11162, done.
+   : remote: Compressing objects: 100% (8803/8803), done.
+   : remote: Total 11162 (delta 3577), reused 5945 (delta 2256), pack-reused 0
+   : Receiving objects: 100% (11162/11162), 66.79 MiB | 29.00 KiB/s, done.
+   : Resolving deltas: 100% (3577/3577), done.
+   : Checking connectivity... done.
+
+   Much better now, but still need to make =yaourt= get the /bare
+   repository/. This requires configuration your *yaourtrc* file,
+   change the following variable. See *yaourtrc* manual for details,
+   move your /repo/ into.
+
+   #+begin_src bash
+     DEVEL = 1
+     DEVELSRCDIR = /path/to/yaourt/devel/directory
+   #+end_src
+
+   Once again restarting build from *yaourt*, now we don't have to
+   _download_ the *git history*.
+
+   :
+   : ==> Continue building qgis-git ? [Y/n]
+   : ==> ----------------------------------
+   : ==> y
+   : ==> Building and installing package
+   : ==> Making package: qgis-git 2.11-3 (Wed Aug 26 14:23:34 NPT 2015)
+   : ==> Checking runtime dependencies...
+   : ==> Checking buildtime dependencies...
+   : ==> Retrieving sources...
+   :   -> Updating qgis git repo...
+   : Fetching origin
+   : From git://github.com/qgis/QGIS
+   :  * branch            HEAD       -> FETCH_HEAD
+   :   -> Found qgis-git.png
+   :   -> Found qgis-git.sh
+   :   -> Found console.py
+   : ==> Validating source files with md5sums...
+   :  md5sums...
+   :     qgis ... Skipped
+   :     qgis-git.png ... Passed
+   :     qgis-git.sh ... Passed
+   :     console.py ... Passed
+   : ==> Extracting sources...
+   :   -> Creating working copy of QGIS git repo...
+   : Cloning into 'qgis'...
+   : remote: Counting objects: 11162, done.
+   : remote: Compressing objects: 100% (7482/7482), done.
+   : remote: Total 11162 (delta 3577), reused 11162 (delta 3577)
+   : Receiving objects: 100% (11162/11162), 66.79 MiB | 58.66 MiB/s, done.
+   : Resolving deltas: 100% (3577/3577), done.
+   : Checking connectivity... done.
+   : ==> Starting pkgver()...
+   : ==> Updated version: qgis-git 2.11.r1-1
+   : ==> Starting prepare()...
+   : ==> Starting build()...
+   :
+
+   Compilation took almost _60 mins_, then while packaging it failed!
+
+   : install: cannot stat ‘/path/to/yaourt-tmp/aur-qgis-git/pkg/qgis-git/opt/qgis-git/bin/qgis_mapserv.fcgi’: No such file or directory
+   : ==> ERROR: A failure occurred in package().
+   :     Aborting...
+   : ==> ERROR: Makepkg was unable to build qgis-git.
+   : ==> Restart building qgis-git ? [y/N]
+   : ==> ---------------------------------
+   : ==>
+
+   It was the close call since the *error* was not raised by the
+   =built()= process, imagine trying to fix it by *hit and trail* with
+   built time like that.
+
+* Under the hood
+
+  At this point of time, its too *risky* to run *yaourt* /again/ since
+  it wipes everything and starts from scratch and the compiled output
+  would be lost forever but problem was where the heck is that file
+  what cause this mayhem in the first place.
+
+  : $ cd /path/to/yaourt-tmp/aur-qgis-git/
+  : $ find -iname "*qgis_mapserv.fcgi*"
+
+  and culprit was no where to be found.
+
+** where is my engine
+
+   Yet again, the *AUR* was unpredictable, when you read the *PKGFILE*
+   you can find the frustration of the maintainer here and there.
+
+   #+BEGIN_EXAMPLE
+   install -Dm755 $pkgdir/opt/$pkgname/bin/qgis_mapserv.fcgi \
+     $pkgdir/usr/bin/qgis_mapserv_git.fcgi
+
+   # TODO: these aren't working for some reason, ie, .qgs files are not opened by QGIS...
+   # Appears to be a conflict with some file types being defaulted to google-chrome/chromium if that's installed as well.
+   #install -dm755 "$pkgdir/usr/share/pixmaps" \
+   #  "$pkgdir/usr/share/mimelnk/application"
+
+   #+END_EXAMPLE
+
+   it seemed to work without few components
+
+   [[dash.jpeg]]
+
+   : $ cd /path/to/yaourt-tmp/aur-qgis-git/src/qgis/build/output/bin
+   : $ ls
+   : crssync  qbrowser  qgis  qgisbuildpath.txt
+
+   there it was, =qgis=.
+
+   [[check.jpeg]]
+
+** bypass
+
+   Since, the built was already over I commented the =built()= section
+   and let =makepkg= do it magic after few minutes it was ready.
+
+   : ..
+   : ...
+   : ==> Tidying install...
+   :   -> Purging unwanted files...
+   :   -> Removing libtool files...
+   :   -> Removing static library files...
+   :   -> Compressing man and info pages...
+   :   -> Stripping unneeded symbols from binaries and libraries...
+   : ==> Creating package "qgis-git"...
+   :   -> Generating .PKGINFO file...
+   :   -> Adding install file...
+   :   -> Generating .MTREE file...
+   :   -> Compressing package...
+   : ==> Leaving fakeroot environment.
+   : ==> Finished making: qgis-git 2.11.r1-1 (Wed Aug 26 19:14:01 NPT 2015)
+
+   installing
+
+   : $ sudo pacman -U qgis-git-2.11.r1-1-x86_64.pkg.tar.xz
+   : [sudo] password for user:
+   : loading packages...
+   : resolving dependencies...
+   : looking for conflicting packages...
+   :
+   : Packages (1) qgis-git-2.11.r1-1
+   :
+   : Total Installed Size:  144.93 MiB
+   :
+   : :: Proceed with installation? [Y/n] y
+   : (1/1) checking keys in keyring                     [######################] 100%
+   : (1/1) checking package integrity                   [######################] 100%
+   : (1/1) loading package files                        [######################] 100%
+   : (1/1) checking for file conflicts                  [######################] 100%
+   : (1/1) checking available disk space                [######################] 100%
+   : (1/1) installing qgis-git                          [######################] 100%
+   : Optional dependencies for qgis-git
+   :     grass: GRASS plugin support
+   :     fcgi: QGIS Map Server support [installed]
+   :     osgearth: QGIS Globe plugin support
+   :     gpsbabel: GPS toolbar support
+
+* FAQ
+
+  - Is the game out?
+
+    I'm still trying to find *3D-model* data, its lost somewhere.

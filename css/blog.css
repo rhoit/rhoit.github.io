@@ -52,6 +52,10 @@ section {
     margin-left      : 0px;
 }
 
+#blog h1, h3, h4, h5, h6 {
+    color            : #325D72;
+}
+
 #blog h1, h2, h3, h4, h5, h6, hr,
 #org-content > p:nth-child(3),
 #org-content > p:nth-child(2) {
