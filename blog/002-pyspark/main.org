@@ -1,14 +1,20 @@
-#+TITLE: pyspark
+#+TITLE: pyspark: i need a notebook
+#+DESCRIPTION: one doesn't emulates
 #+DATE: Monday, Aug 17 2015
+#+PUBLISHED: Monday, Aug 19 2015
+#+UPDATED: Wednesday, Aug 22 2015
+#+TAGS: #arch #linux #hack #rant
 
 #+OPTIONS: toc:0
 #+STARTUP: showall
 
 After the wave of [[http://hadoop.apache.org][hadoop]], *Big Data* world was set on wild fire by
 [[https://spark.apache.org][apache-spark]]. *Spark* was not only fast but also had interface for
-*scala* and *python*. The *python api*, was only the reason I dived
+=scala= and =python=. The *python api*, was only the reason I dived
 into, Since I can avoid *java*, or /so I thought.../. I was told to
 use the *vagrant* for using *spark*, but I wasn't the one to do that.
+
+[[notebook.jpg]]
 
 * le get package
 
@@ -189,7 +195,8 @@ use the *vagrant* for using *spark*, but I wasn't the one to do that.
 * Getting it running
 ** first run
 
-   What I was expecting to start, just like that
+   Good thing was, I was expecting it to start, just like that, and it
+   didn't failed to do that.
 
    : $ pyspark
    : bash: pyspark: command not found
