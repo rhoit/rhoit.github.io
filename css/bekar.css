@@ -1,190 +1,196 @@
+html {
+    overflow-y: scroll;
+}
+
 #header {
-    padding         : 0;
-    top             : -3px;
-    left            : 0;
-    right           : 0;
-    position        : fixed;
-    padding         : 0 5px;
-    margin          : 0px;
-    color           : #3679ff;
-    background      : linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.1)), url("../img/symphony.png") fixed;
-    opacity         : 0.8;
-    z-index         : 1;
+    padding          : 0;
+    top              : -3px;
+    left             : 0;
+    right            : 0;
+    position         : fixed;
+    padding          : 0 5px;
+    margin           : 0px;
+    color            : #3679ff;
+    background       : linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.1)), url("../img/symphony.png") fixed;
+    opacity          : 0.8;
+    z-index          : 1;
 }
 
 body {
-    padding         : 50px;
-    margin-right    : 15px;
-    font-size       : 15px;
-    background      : url("../img/symphony.png") fixed;
+    padding          : 50px;
+    margin-right     : 15px;
+    font-size        : 15px;
+    background       : url("../img/symphony.png") fixed;
 }
 
+h2 {
+    font-size        : 28px;
+}
 
 #header p {
-    font-size       : 100%;
-    font-weight     : bold;
-    float           : left;
-    padding         : 5px 0;
-    margin          : 0;
-    vertical-align  : super;
-    /* text-shadow     : 1px 1px #55f; */
-    /* background      : #E2E2E2; */
-    /* border-bottom   : 1px coral solid; */
+    font-size        : 100%;
+    font-weight      : bold;
+    float            : left;
+    padding          : 5px 0;
+    margin           : 0;
+    vertical-align   : super;
+    /* text-shadow      : 1px 1px #55f; */
+    /* background       : #E2E2E2; */
+    /* border-bottom    : 1px coral solid; */
 }
 
 #header a:link, #header a:visited {
-    text-decoration : none;
+    text-decoration  : none;
 }
 
 .wrapper {
-    width           : 90%;
-    margin          : 0 auto;
+    width            : 90%;
+    margin           : 0 auto;
 }
 
 panel {
-    width           : 24%;
-    float           : left;
-    position        : fixed;
+    width            : 24%;
+    float            : left;
+    position         : fixed;
 }
 
 panel h1 {
-    font-family     : Helvetica;
+    font-family      : Helvetica;
 }
 
 panel ul {
-    list-style      : none;
-    height          : 40px;
-    padding         : 0;
-    background      : #eee;
-    border-radius   : 5px;
-    border          : 1px solid #d2d2d2;
-    box-shadow      : inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
-    width           : 270px;
+    list-style       : none;
+    height           : 40px;
+    padding          : 0;
+    background       : #eee;
+    border-radius    : 5px;
+    border           : 1px solid #d2d2d2;
+    box-shadow       : inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
+    width            : 270px;
 }
 
 panel li {
-    width           : 89px;
-    float           : left;
-    border-right    : 1px solid #d2d2d2;
-    height          : 40px;
+    width            : 89px;
+    float            : left;
+    border-right     : 1px solid #d2d2d2;
+    height           : 40px;
 }
 
 panel ul a {
-    line-height     : 1;
-    font-size       : 11px;
-    color           : #999;
-    display         : block;
-    text-align      : center;
-    padding-top     : 6px;
-    height          : 40px;
+    line-height      : 1;
+    font-size        : 11px;
+    color            : #999;
+    display          : block;
+    text-align       : center;
+    padding-top      : 6px;
+    height           : 40px;
 }
 
 strong {
-    color           : #222;
-    font-weight     : 700;
+    color            : #222;
+    font-weight      : 700;
 }
 
 panel ul li + li {
-    width           : 88px;
-    border-left     : 1px solid #fff;
+    width            : 88px;
+    border-left      : 1px solid #fff;
 }
 
 panel ul li + li + li {
-    border-right    : none;
-    width           : 89px;
+    border-right     : none;
+    width            : 89px;
 }
 
 panel ul a strong {
-    font-size       : 14px;
-    display         : block;
-    color           : #222;
+    font-size        : 14px;
+    display          : block;
+    color            : #222;
 }
 
 section {
-    width           : 70%;
-    float           : right;
-    margin          : 0;
-    padding-bottom  : 100px;
+    width            : 70%;
+    float            : right;
+    margin           : 0;
+    padding-bottom   : 100px;
 }
 
 small {
-    font-size       : 10px;
+    font-size        : 10px;
 }
 
 hr {
-    border          : 0;
-    background      : #e5e5e5;
-    height          : 1px;
-    margin          : 0 0 20px;
+    border           : 0;
+    background       : #e5e5e5;
+    height           : 1px;
+    margin           : 0 0 20px;
 }
 
 footer {
-    width           : 270px;
-    float           : left;
-    position        : fixed;
-    bottom          : 50px;
-    z-index         : -1;
+    width            : 270px;
+    float            : left;
+    position         : fixed;
+    bottom           : 50px;
+    z-index          : -1;
 }
 
 pre, code {
-    font-family     : Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-family      : Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 @media print, screen and (max-width: 960px) {
     div.wrapper {
-        width         :  auto;
-        margin        :  0;
+        width        :  auto;
+        margin       :  0;
     }
 
     panel, section, footer {
-        float         : none;
-        position      : static;
-        width         : auto;
+        float        : none;
+        position     : static;
+        width        : auto;
     }
 
     panel {
-        padding-right : 320px;
+        padding      : 0px 0px 320px 0px;
     }
 
     section {
-        border        : 1px solid #e5e5e5;
-        border-width  : 1px 0;
-        padding       : 20px 0;
-        margin        : 0 0 20px;
+        border       : 1px solid #e5e5e5;
+        paddin       : 20px 0;
+        margin       : 0 0 20px;
     }
 
     panel a small {
-        display       : inline;
+        display      : inline;
     }
 
     panel ul {
-        position      : absolute;
-        right         : 50px;
-        top           : 52px;
+        position     : absolute;
+        right        : 50px;
+        top          : 52px;
     }
 }
 
 @media print, screen and (max-width: 720px) {
     body {
-        word-wrap : break-word;
-        padding   : 25px;
+        word-wrap    : break-word;
+        padding      : 25px;
     }
 
     panel {
-        padding   : 0;
+        padding      : 0;
     }
 
     panel ul, panel p.view {
-        position  : static;
+        position     : static;
     }
 
     pre, code {
-        word-wrap : normal;
+        word-wrap    : normal;
     }
 }
 
 @media print, screen and (max-width: 480px) {
     panel ul {
-        display : none;
+        display      : none;
     }
 }
