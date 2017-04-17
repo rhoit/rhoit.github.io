@@ -1,125 +1,167 @@
 <!DOCTYPE html>
-<html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>blog</title>
-
-    <style>
-     #blog:hover {
-       background: #F1F3FE;
-       box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.5);
-       cursor: pointer;
-     }
-    </style>
-
-    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/bekar.css">
     <link rel="stylesheet" href="../css/blog.css">
-  </head>
-  <body>
+    <style>
+     .blog:hover {
+         background: #F1F3FE;
+         box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.5);
+         cursor: pointer;
+     }
+     .title a:hover {
+        text-decoration: none;
+     }
+    </style>
+</head>
+
+<body>
     <div id="header">
-	  <p style="width: 80%; text-align: right">
-        <a href="../"><img height="18px" src="../img/svg/home.svg"> home</a>&nbsp;&nbsp;
-        <a href="../blog/"><img height="18px" src="../img/svg/quill.svg"> blog</a>&nbsp;&nbsp;
-        <a href="../notes/"><img height="18px" src="../img/svg/notes.svg"> notes</a>&nbsp;&nbsp;
-        <a href="../etc/"><img height="18px" src="../img/svg/etc.svg"> etc</a>&nbsp;&nbsp;
-	  </p>
-      <p style="width: 20%; text-align: right">
-        <a href="../bio/">About <img height="18px" src="../img/svg/about.svg"></a>
-      </p>
+	    <p style="width: 80%; text-align: right">
+            <a href="../"><img height="18px" src="../img/svg/home.svg"> home</a>&nbsp;&nbsp;
+            <a href="../blog/"><img height="18px" src="../img/svg/quill.svg"> blog</a>&nbsp;&nbsp;
+            <a href="../notes/"><img height="18px" src="../img/svg/notes.svg"> notes</a>&nbsp;&nbsp;
+            <a href="../etc/"><img height="18px" src="../img/svg/etc.svg"> etc</a>&nbsp;&nbsp;
+	    </p>
+        <p style="width: 20%; text-align: right">
+            <a href="../bio/">About <img height="18px" src="../img/svg/about.svg"></a>
+        </p>
     </div>
 
     <div class="wrapper">
-      <panel>
-        <h1>rhoit.com/blog</h1>
-        <p>Few scribbles and rants</p>
-      </panel>
-
-      <section>
-        <div id="blog" onclick="location.href='002-pyspark'">
-          <div id="blog-tag">2015 Aug 17</div>
-          <div id="org-content">
-            <h1 class="title">pyspark</h1>
+        <panel>
+            <h1>rhoit.com/blog</h1>
             <p>
-              After the wave of <a href="http://hadoop.apache.org"">hadoop</a>,
-              <b>Big Data</b> world was set on wild fire by
-              <a href="https://spark.apache.org">apache-spark</a>. Spark
-              was not only fast but also had interface for <b>scala</b>
-              and <b>python</b>. The <b>python api</b>, was only the reason I
-              dived into, Since I can avoid <b>java</b>, or <em>so I
-              thought...</em> . I was told to use the vagrant for
-              using <b>spark</b>, but I wasn't the one to do that.
+                might be interesting scribble & rants,<br>
+                but can't say which
             </p>
-          </div>
-          <p>
-            <span class="glyphicon glyphicon-tags" aria-hidden="true">&nbsp;</span>
-            <a class="tag-list" href="#">#rant</a>
-            <a class="tag-list" href="#">#archlinux</a>
-            <a class="tag-list" href="#">#hack</a>
-          </p>
-          <hr>
-          <div id="blog-dates">
-            <span>
-              <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-              Last updated on &nbsp;
-              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-              <b>19 Aug 2015</b>
-            </span>
+        </panel>
 
-            <span style="float:right">
-              <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
-              Published on &nbsp;
-              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-              <b>19 Aug 2015</b>
-            </span>
-          </div>
-        </div>
+        <section>
+            <div class="blog" onclick="location.href='004-qgis'">
+                <div class="blog-tag">2015 Sep 02</div>
+                <div class="blog-gist">
+                    <h1 class="title">
+                        <a href="004-qgis">installing GIS</a>
+                    </h1>
+                    <p>
+                        It was year <b>2012-2013</b> I got my hand on <b>3D-model</b> data of
+                        <b>University</b>, and the idea popped up..
+                        <i>Why not we play *games* on it?</i>, <b>NFS</b>, <b>CS</b>...
+                        only problem was map was in <code>GIS</code>. Looking
+                        back now <b>games</b> I <del>wrote</del> till date only
+                        runs on <a href="https://github.com/rhoit/2048">terminal</a>, is definitely a
+                        <del>good</del> start, but when I'm done it would be <b>awesome</b>.
+                    </p>
+                </div>
+                <div class="blog-footer">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    Last updated on <b>26 Aug 2015</b>
 
-        <br>
-        <div id="blog" onclick="location.href='001-blog'">
-          <div id="blog-tag">2015 Jan 17</div>
-          <div id="org-content">
-            <h1 class="title">Let's Blog <del>Again</del></h1>
+                    <span style="float:right">
+                        <span class="glyphicon glyphicon-tags" aria-hidden="true">&nbsp;</span>
+                        <a class="tag-list" href="#">#arch</a>
+                        <a class="tag-list" href="#">#linux</a>
+                        <a class="tag-list" href="#">#hack</a>
+                        <a class="tag-list" href="#">#git</a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="blog" onclick="location.href='003-input'">
+                <div class="blog-tag">2015 Aug 31</div>
+                <div class="blog-gist">
+                    <h1 class="title">what's wrong with your keyboard?</h1>
+                    <p>When people use my computer for <b>first-time</b>, they all ask the same
+                        <span style="text-decoration:underline;">question</span>.
+                    </p>
+                    <blockquote><p>what's wrong with your keyboard?</p></blockquote>
+                    <p><img src="003-input/umadbro.jpg" alt="umadbro.jpg" title="umadbro.jpg"></p>
+                </div>
+                <div class="blog-footer">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    Last updated on <b>2015 Aug 31</b>
+
+                    <span style="float:right">
+                        <span class="glyphicon glyphicon-tags" aria-hidden="true">&nbsp;</span>
+                        <a class="tag-list" href="#">#linux</a>
+                        <a class="tag-list" href="#">#input</a>
+                        <a class="tag-list" href="#">#hack</a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="blog" onclick="location.href='002-pyspark'">
+                <div class="blog-tag">2015 Aug 19</div>
+                <div class="blog-gist">
+                    <h1 class="title">pyspark: i need a notebook</h1>
+                    <p>
+                        After the wave of <a href="http://hadoop.apache.org"">hadoop</a>,
+                        <b>Big Data</b> world was set on wild fire by
+                        <a href="https://spark.apache.org">apache-spark</a>. Spark
+                        was not only fast but also had interface for <code>scala</code>
+                        and <code>python</code>. The <b>python api</b>, was only the reason I
+                        dived into, Since I can avoid <b>java</b>, or <em>so I
+                            thought...</em> . I was told to use the vagrant for
+                        using <b>spark</b>, but I wasn't the one to do that.
+                    </p>
+                    <p><img src="002-pyspark/notebook.jpg" alt="notebook.jpg" title="notebook.jpg"></p>
+                </div>
+                <div class="blog-footer">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    Last updated on <b>2015 Aug 19</b>
+
+                    <span style="float:right">
+                        <span class="glyphicon glyphicon-tags" aria-hidden="true">&nbsp;</span>
+                        <a class="tag-list" href="#">#rant</a>
+                        <a class="tag-list" href="#">#arch</a>
+                        <a class="tag-list" href="#">#linux</a>
+                        <a class="tag-list" href="#">#hack</a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="blog" onclick="location.href='001-blog'">
+                <div class="blog-tag">2015 Aug 17</div>
+                <div class="blog-gist">
+                    <h1 class="title">let's blog <del>again</del></h1>
+                    <p>
+                        After learning about <b>gh-pages</b>, from <b>github</b>,
+                        I came to learn about <b>static web-page generator</b>.
+                        This is the story of procrastination, where I decided to
+                        create a site. <strike>Strangely</strike> my first blog, published 7
+                        months late, explain how all started after all.
+                    </p>
+                    <p><img src="001-blog/procrastination.png"></p>
+                </div>
+                <div class="blog-footer">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    Last updated on <b>2015 Aug 19</b>
+
+                    <span style="float:right">
+                        <span class="glyphicon glyphicon-tags" aria-hidden="true">&nbsp;</span>
+                        <a class="tag-list" href="#">#rant</a>
+                        <a class="tag-list" href="#">#project</a>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <footer>
             <p>
-              After learning about <b>gh-pages</b>, from <b>github</b>,
-              I came to learn about <b>static web-page generator</b>.
-              This is the story of procrastination, where I decided to
-              create a site. <strike>Strangely</strike> my first blog, published 7
-              months late, explain how all started after all.
-            </p>
-          </div>
-          <p>
-            <span class="glyphicon glyphicon-tags" aria-hidden="true">&nbsp;</span>
-            <a class="tag-list" href="#">#rant</a>
-            <a class="tag-list" href="#">#project</a>
-          </p>
-          <hr>
-          <div id="blog-dates">
-            <span>
-              <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-              Last updated on &nbsp;
-              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-              <b>19 Aug 2015</b>
-            </span>
-
-            <span style="float:right">
-              <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
-              Published on &nbsp;
-              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-              <b>17 Aug 2015</b>
-            </span>
-          </div>
-
-        </div>
-      </section>
-
-      <footer>
-        <p>
-          Powered by <a href="https://github.com/rhoit/bekar-static-gen">bekar-static-gen</a>
-        <p>
-      </footer>
+                Powered by <a href="https://github.com/rhoit/bekar-static-gen">bekar-static-gen</a>
+                <p>
+        </footer>
     </div>
-  </body>
-</html>
+</body>
+
+<!--
+     # Local Variables:
+     # mode: web
+     # End:
+   -->
