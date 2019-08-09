@@ -436,6 +436,22 @@
 
     [[./pyramid.jpg]]
 
+
+    answer is in the source
+
+    # #+BEGIN_SRC python :results output
+    #   print(sum((2*i+1)**2 for i in range(30)))
+
+    #   # explaination
+    #   cubes = 0
+    #   for i in range(30):
+    #       width  = 2 * i + 1
+    #       area   = width * width
+    #       cubes += area
+    #       print(i, width, area)
+    #   print(cubes)
+    # #+END_SRC
+
 # Local Variables:
 # buffer-read-only: t
 # End:
