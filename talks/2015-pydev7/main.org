@@ -151,6 +151,19 @@
    : 6
    : 24
 
+   *Update: 2019 Aug 09*
+
+   ya ya 0! (zero factorial is 1) lets ignore it for now or just fix
+   it, thanks to Oshan and Abhilekh!
+
+   #+BEGIN_SRC python :results output
+     factorial = lambda n: 1 if (n == 1 or n == 0) else n * factorial(n-1)
+     print(factorial(0))
+   #+END_SRC
+
+   #+RESULTS:
+   : 1
+
 * map
 
   घेरैले गर्ने तरिका
