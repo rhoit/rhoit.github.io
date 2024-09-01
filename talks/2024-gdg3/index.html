@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" class="reveal-full-page"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>your code is horrible pls lint it</title>
+<meta name="author" content="rho">
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./index_files/reveal.css">
+
+<link rel="stylesheet" href="./index_files/night.css" id="theme">
+
+<link rel="stylesheet" href="./index_files/effects.css">
+<link rel="stylesheet" href="./index_files/stackoverflow-dark.css">
+<script type="text/javascript" src="./index_files/tex-mml-chtml.js"></script><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style>
+<style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style><style id="MJX-CHTML-styles">
+mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+_::-webkit-full-page-media, _:future, :root mjx-container {
+  will-change: opacity;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-math {
+  display: inline-block;
+  text-align: left;
+  line-height: 0;
+  text-indent: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  font-size-adjust: none;
+  letter-spacing: normal;
+  border-collapse: collapse;
+  word-wrap: normal;
+  word-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  padding: 1px 0;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="CHTML"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="CHTML"][display="true"] mjx-math {
+  padding: 0;
+}
+
+mjx-container[jax="CHTML"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="CHTML"][justify="right"] {
+  text-align: right;
+}
+
+mjx-mi {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c {
+  display: inline-block;
+}
+
+mjx-utext {
+  display: inline-block;
+  padding: .75em 0 .2em 0;
+}
+
+mjx-mo {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-stretchy-h {
+  display: inline-table;
+  width: 100%;
+}
+
+mjx-stretchy-h > * {
+  display: table-cell;
+  width: 0;
+}
+
+mjx-stretchy-h > * > mjx-c {
+  display: inline-block;
+  transform: scalex(1.0000001);
+}
+
+mjx-stretchy-h > * > mjx-c::before {
+  display: inline-block;
+  width: initial;
+}
+
+mjx-stretchy-h > mjx-ext {
+  /* IE */ overflow: hidden;
+  /* others */ overflow: clip visible;
+  width: 100%;
+}
+
+mjx-stretchy-h > mjx-ext > mjx-c::before {
+  transform: scalex(500);
+}
+
+mjx-stretchy-h > mjx-ext > mjx-c {
+  width: 0;
+}
+
+mjx-stretchy-h > mjx-beg > mjx-c {
+  margin-right: -.1em;
+}
+
+mjx-stretchy-h > mjx-end > mjx-c {
+  margin-left: -.1em;
+}
+
+mjx-stretchy-v {
+  display: inline-block;
+}
+
+mjx-stretchy-v > * {
+  display: block;
+}
+
+mjx-stretchy-v > mjx-beg {
+  height: 0;
+}
+
+mjx-stretchy-v > mjx-end > mjx-c {
+  display: block;
+}
+
+mjx-stretchy-v > * > mjx-c {
+  transform: scaley(1.0000001);
+  transform-origin: left center;
+  overflow: hidden;
+}
+
+mjx-stretchy-v > mjx-ext {
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  border: 0px solid transparent;
+  /* IE */ overflow: hidden;
+  /* others */ overflow: visible clip;
+}
+
+mjx-stretchy-v > mjx-ext > mjx-c::before {
+  width: initial;
+  box-sizing: border-box;
+}
+
+mjx-stretchy-v > mjx-ext > mjx-c {
+  transform: scaleY(500) translateY(.075em);
+  overflow: visible;
+}
+
+mjx-mark {
+  display: inline-block;
+  height: 0px;
+}
+
+mjx-msup {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mn {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("file:///home/rho/Public/vendors/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+
+mjx-c.mjx-c1D452.TEX-I::before {
+  padding: 0.442em 0.466em 0.011em 0;
+  content: "e";
+}
+
+mjx-c.mjx-c3D::before {
+  padding: 0.583em 0.778em 0.082em 0;
+  content: "=";
+}
+
+mjx-c.mjx-c1D45A.TEX-I::before {
+  padding: 0.442em 0.878em 0.011em 0;
+  content: "m";
+}
+
+mjx-c.mjx-c1D450.TEX-I::before {
+  padding: 0.442em 0.433em 0.011em 0;
+  content: "c";
+}
+
+mjx-c.mjx-c32::before {
+  padding: 0.666em 0.5em 0 0;
+  content: "2";
+}
+</style></head>
+<body class="reveal-viewport" style="--slide-width:960px; --slide-height:700px; --slide-scale:1.00251;">
+<div class="reveal convex center focused has-vertical-slides has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="fade" style="">
+<div class="slides" style="width: 960px; height: 700px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(1.00251);">
+<section style="top: 181.5px; display: block;" class="past" hidden="" aria-hidden="true" data-index-h="0">
+    <h2>Your &lt;code&gt; is</h2>
+    <h2>
+    horrible
+    <img style="margin: calc(-32px) calc(-20px)" src="./index_files/face_vomiting.gif" alt="🤮">
+    </h2><h2>
+    </h2><h3>pls lint it! </h3><h3>
+</h3></section>
+
+<section style="top: 0px; display: block;" class="stack present" data-previous-indexv="1" data-index-h="1">
+<section id="slide-orge77f433" style="top: 38px; display: block;" class="present" data-index-h="1" data-index-v="0">
+<h2 id="orge77f433">DAY-IN-DAY-OUT</h2>
+
+<div id="org829e5c9" class="figure">
+<p><img src="./index_files/fixing.gif" alt="fixing.gif">
+</p>
+</div>
+
+<p>
+Looking at Juniors &lt;Code&gt;!
+</p>
+
+</section>
+<section id="slide-orgdfdb09b" class="future" style="top: 54px; display: block;" data-index-h="1" data-index-v="1" hidden="" aria-hidden="true">
+<h3 id="orgdfdb09b">should I fix it? <img style="margin: calc(-32px) calc(-20px)" src="./index_files/thinking_face.gif" alt="🤔"></h3>
+
+<div id="orge1f98a6" class="figure">
+<p><img src="./index_files/debt.jpg" alt="debt.jpg" height="350px">
+</p>
+</div>
+
+<p>
+let them fix it!
+</p>
+
+</section>
+<section id="slide-org7c19f40" class="future" style="top: 31.5px; display: block;" data-index-h="1" data-index-v="2" hidden="" aria-hidden="true">
+<h3 id="org7c19f40">teaching is not enough</h3>
+
+<div id="orge13934d" class="figure">
+<p><img src="./index_files/curious.jpg" alt="curious.jpg" height="400px">
+</p>
+</div>
+
+<p>
+give them tools
+</p>
+
+</section>
+</section>
+<section style="top: 0px; display: block;" class="stack future" data-previous-indexv="0" data-index-h="2" hidden="" aria-hidden="true">
+<section id="slide-orgfb22dbd" style="top: 18px; display: block;" class="" data-index-h="2" data-index-v="0" aria-hidden="true">
+<h2 id="orgfb22dbd">CONDITIONS</h2>
+
+<div id="org056f721" class="figure">
+<p><img src="./index_files/yoda-hope.jpg" alt="yoda-hope.jpg" height="400px">
+</p>
+</div>
+
+<p>
+perfect code write we
+</p>
+
+</section>
+<section id="slide-org5dd8c10" class="future" style="top: 185.5px; display: block;" data-fragment="-1" data-index-h="2" data-index-v="1" hidden="" aria-hidden="true">
+<h3 id="org5dd8c10">humans make mistakes</h3>
+<div class="org-src-container">
+
+<pre><code class="js" data-line-numbers=|2|3>let variable = 'value'
+if (variable = 'should not match') {
+    console.log('Oops! 😩')
+}
+console.log(variable)
+</code></pre>
+</div>
+
+<pre class="example">Oops! 😩
+should not match
+</pre>
+
+</section>
+<section id="slide-org1b0d5d4" class="future" style="top: 0px; display: none;" data-fragment="-1" data-index-h="2" data-index-v="2" hidden="" aria-hidden="true">
+<h3 id="org1b0d5d4">logical to syntax</h3>
+<div class="org-src-container">
+
+<pre><code class="js" data-line-numbers=|2>let variable = 'value'
+if ('should not match' = variable) {
+    console.log('this will never happen! 😏')
+}
+</code></pre>
+</div>
+
+<div class="fragment" id="org65cd809" data-fragment-index="1">
+<pre class="example" id="org50327ea">if ('should not match' = variable) {
+    ^^^^^^^^^^^^^^^^^^
+
+SyntaxError: Invalid left-hand side in assignment
+    at internalCompileFunction (node:internal/vm:74:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1128:20)
+    at Module._compile (node:internal/modules/cjs/loader:1169:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1259:10)
+    at Module.load (node:internal/modules/cjs/loader:1068:32)
+    at Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:82:12)
+    at node:internal/main/run_main_module:23:47
+
+Node.js v19.1.0
+</pre>
+
+</div>
+
+</section>
+<section id="slide-org4173176" class="future" style="top: 0px; display: none;" data-index-h="2" data-index-v="3" aria-hidden="true" hidden="">
+<h3 id="org4173176">take-away 🎁</h3>
+<p>
+<img style="margin: calc(-16px) calc(-5px)" src="./index_files/police_car_light.gif" alt="🚨">
+catch human error easily
+<img style="margin: calc(-16px) calc(-5px)" src="./index_files/police_car_light.gif" alt="🚨">
+</p>
+
+
+<div id="org51c6563" class="figure">
+<p><img src="./index_files/blender.gif" alt="blender.gif">
+</p>
+</div>
+
+</section>
+<section id="slide-orgdcdde6c" class="future" style="top: 0px; display: none;" aria-hidden="true" data-index-h="2" data-index-v="4" hidden="">
+<h3 id="orgdcdde6c">references</h3>
+<form><ul>
+<li><a href="https://en.wikipedia.org/wiki/Yoda_conditions">https://en.wikipedia.org/wiki/Yoda_conditions</a></li>
+<li><a href="https://eslint.org/docs/latest/rules/yoda">https://eslint.org/docs/latest/rules/yoda</a></li>
+
+</ul></form>
+
+</section>
+</section>
+<section style="top: 0px; display: block;" class="stack future" data-previous-indexv="0" data-index-h="3" hidden="" aria-hidden="true">
+<section id="slide-orga77b7d0" style="top: 54px; display: block;" class="" data-index-h="3" data-index-v="0" aria-hidden="true">
+<h2 id="orga77b7d0">WHAT-CHANGED</h2>
+
+<div id="org45e36db" class="figure">
+<p><img src="./index_files/sv-tres-comma.jpg" alt="sv-tres-comma.jpg" height="400px">
+</p>
+</div>
+
+</section>
+<section id="slide-orge7cfe82" class="future" style="top: 0px; display: none;" data-fragment="1" data-index-h="3" data-index-v="1" hidden="" aria-hidden="true">
+<h3 id="orge7cfe82">new changes</h3>
+<p>
+version 1
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="js" data-line-numbers>var object = {
+    trailing  : 'comma',
+    unchanged : 'line'
+}
+</code></pre>
+</div>
+
+<p>
+version 2
+<img style="margin: calc(-16px) calc(-5px)" src="./index_files/smiling_face_with_sunglasses.gif" alt="😎">
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="js" data-line-numbers=|3,5|4>var object = {
+    trailing  : 'comma',
+    clean     : 'only insert this line',
+    unchanged : 'line',
+    dirty     : 'add comma above',
+}
+</code></pre>
+</div>
+
+</section>
+<section id="slide-orgb5692e9" class="future" style="top: 0px; display: none;" data-fragment="0" data-index-h="3" data-index-v="2" hidden="" aria-hidden="true">
+<h3 id="orgb5692e9">git status</h3>
+<p>
+Oops, I had to change it
+<img style="margin: calc(-16px) calc(-5px)" src="./index_files/dizzy_face.gif" alt="😵">
+</p>
+
+<div class="org-src-container">
+
+<pre class="code-wrapper"><code class="sh hljs bash">diff -u version-1.js version-2.js
+</code></pre>
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="diff" data-line-numbers=|6,8>--- version-1.js	2022-11-30 09:06:25.640608070 +0545
++++ version-2.js	2022-11-30 09:06:25.650608070 +0545
+@@ -1,4 +1,6 @@
+ var object = {
+     trailing  : 'comma',
+-    unchanged : 'line'
++    clean     : 'only insert this line',
++    unchanged : 'line',
++    dirty     : 'add comma above',
+ }
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org30c2a0d" class="future" style="top: 0px; display: none;" data-index-h="3" data-index-v="3" aria-hidden="true" hidden="">
+<h3 id="org30c2a0d">take-away 🎁</h3>
+<p>
+trailing commas will give you
+</p>
+
+<p>
+✨ cleaner diffs
+</p>
+
+<p>
+<img style="margin: calc(-32px) calc(-20px)" src="./index_files/star_struck.gif" alt="🤮">
+</p>
+
+</section>
+<section id="slide-org7575bb8" class="future" style="top: 0px; display: none;" data-index-h="3" data-index-v="4" aria-hidden="true" hidden="">
+<h3 id="org7575bb8">reference</h3>
+<form><ul>
+<li><a href="https://eslint.org/docs/latest/rules/comma-dangle">https://eslint.org/docs/latest/rules/comma-dangle</a></li>
+
+</ul></form>
+
+</section>
+</section>
+<section style="top: 0px; display: none;" class="stack future" data-previous-indexv="0" data-index-h="4" hidden="" aria-hidden="true">
+<section id="slide-orge83b35f" style="top: 0px; display: none;" class="" data-index-h="4" data-index-v="0" aria-hidden="true">
+<h2 id="orge83b35f">LINT</h2>
+<span style="
+transform: rotate(30deg);
+position: absolute;
+font-weight: bolder;
+background:purple
+">
+    &nbsp;ESLINT&nbsp;
+</span>
+
+
+<div id="orgbcf1624" class="figure">
+<p><img src="./index_files/ninja-girl.gif" alt="ninja-girl.gif" height="300px">
+</p>
+</div>
+
+<p>
+your 🥷 ninja girl
+</p>
+
+</section>
+<section id="slide-org276147d" class="future" style="top: 0px; display: none;" data-fragment="3" data-index-h="4" data-index-v="1" hidden="" aria-hidden="true">
+<h3 id="org276147d">~/.eslintrc.js</h3>
+<p class="fragment (appear)" data-fragment-index="0">
+every rules should be specified
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="js" data-line-numbers=|3|4>module.exports = {
+    rules : {
+        'yoda'         : ['error', 'always'],
+        'comma-dangle' : ['error', 'always-multiline'],
+    }
+}
+</code></pre>
+</div>
+
+<form><ul>
+<li class="fragment appear" data-fragment-index="3">don't be lazy
+<img style="margin: calc(-16px) calc(-5px)" src="./index_files/sleeping_face.gif" alt="😴"></li>
+
+</ul></form>
+
+</section>
+<section id="slide-orgf30d5a4" class="future" style="top: 0px; display: none;" data-fragment="1" data-index-h="4" data-index-v="2" hidden="" aria-hidden="true">
+<h3 id="orgf30d5a4">extend</h3>
+<p>
+💡 eslint to rescue
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="js" data-line-numbers=|2-4>module.exports = {
+    extends : [
+        'eslint:recommended',
+    ],
+
+    rules : {
+        'yoda'         : ['error', 'always'],
+        'comma-dangle' : ['error', 'always-multiline'],
+    }
+}
+</code></pre>
+</div>
+
+<form><ul>
+<li class="fragment appear" data-fragment-index="1">still feeling lazy there is <a href="https://standardjs.com/">standardjs</a></li>
+
+</ul></form>
+
+</section>
+<section id="slide-org5e83340" class="future" style="top: 0px; display: none;" data-index-h="4" data-index-v="3" hidden="" aria-hidden="true">
+<h3 id="org5e83340">coz</h3>
+
+<div id="orgff723ee" class="figure">
+<p><img src="./index_files/hero-break.jpg" alt="hero-break.jpg">
+</p>
+</div>
+
+</section>
+<section id="slide-org1a5119c" class="future" style="top: 0px; display: none;" data-index-h="4" data-index-v="4" aria-hidden="true" hidden="">
+<h3 id="org1a5119c">references</h3>
+<form><ul>
+<li><a href="https://eslint.org/play/">https://eslint.org/play/</a></li>
+<li><a href="https://eslint.org/docs/latest/rules/">https://eslint.org/docs/latest/rules/</a></li>
+<li><a href="https://eslint.org/docs/latest/user-guide/configuring/configuration-files">https://eslint.org/docs/latest/user-guide/configuring/configuration-files</a></li>
+
+</ul></form>
+
+</section>
+</section>
+<section style="top: 0px; display: none;" class="stack future" data-previous-indexv="0" data-index-h="5" hidden="" aria-hidden="true">
+<section id="slide-orge6bdcd5" style="top: 0px; display: none;" class="" data-index-h="5" data-index-v="0" aria-hidden="true">
+<h2 id="orge6bdcd5">WHY-HORRIBLE 🤮</h2>
+
+<div id="org50d1787" class="figure">
+<p><img src="./index_files/drunk-driver.gif" alt="drunk-driver.gif">
+</p>
+</div>
+
+<p>
+🧻🧻🧻🧻🧻🧻
+</p>
+
+<p class="eff-blink">
+<b>WARNING: highly opinionated section</b>
+</p>
+
+</section>
+<section id="slide-orgd76ddde" class="future" style="top: 0px; display: none;" data-fragment="3" data-index-h="5" data-index-v="1" hidden="" aria-hidden="true">
+<h3 id="orgd76ddde">too-big</h3>
+<p>
+tell me when I go crazy! 🧟
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="js" data-line-numbers=|2|3-5|9|10-12>rules : {
+    'max-len' : [ 'error', {
+        code : 120,  // its hard I know 🤕
+        ignoreStrings: true,
+        ignoreTrailingComments: true,
+    }],
+
+    // stop it ✋, its time to split into files
+    'max-lines' : [ 'error', {
+        max : 500,
+        skipBlankLines : true,
+        skipComments : true,
+    }],
+}
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org237fd2a" class="future" style="top: 0px; display: none;" data-fragment="7" data-index-h="5" data-index-v="2" hidden="" aria-hidden="true">
+<h3 id="org237fd2a">too-cluttered</h3>
+<p>
+🧐 readability matters !
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="js" data-line-numbers=|2-6|4|5|7|8-12|10|11>rules : {
+    'indent' : [
+        'error',
+        4, // 2 it less, 4 is good, 8 is excessive
+        { SwitchCase : 1 },
+    ],
+    'max-depth' : [ 'error', 5 ],
+    'brace-style' : [
+        'error',
+        '1tbs',  // one true brace style 👑
+        { allowSingleLine: true },
+    ],
+}
+</code></pre>
+</div>
+
+<p class="fragment (appear)" data-fragment-index="7">
+<img style="margin: calc(-16px) calc(-5px)" src="./index_files/robot.gif" alt="🤖">
+minify can write short &lt;code&gt; than you!
+</p>
+
+</section>
+<section id="slide-org75c8461" data-background="./index_files/einstine.png" data-background-size="300px" data-background-position="bottom left" class="future" style="top: 0px; display: none;" data-background-image="/home/rho/Public/assets/einstine.png" data-fragment="3" data-index-h="5" data-index-v="3" hidden="" aria-hidden="true">
+<h3 id="org75c8461">as Einstein said</h3>
+<p>
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" display="true" tabindex="0" ctxtmenu_counter="0" style="font-size: 113.1%; position: relative;"><mjx-math display="true" class="MJX-TEX" aria-hidden="true" style="margin-left: 0px; margin-right: 0px;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>e</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></math></mjx-assistive-mml></mjx-container>
+</p>
+
+<p>
+where <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="1" style="font-size: 113.1%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>e</mi></math></mjx-assistive-mml></mjx-container> is
+<b class="fragment eff-blink" style="color:#d66c6d" data-fragment-index="0">error</b>
+and <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="2" style="font-size: 113.1%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi><mi>c</mi></math></mjx-assistive-mml></mjx-container> is
+<b class="fragment" data-fragment-index="1">more code</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="js" data-line-numbers=|3>rules : {
+    'no-unused-vars' : [ 'error', {
+        args : 'none',  // for callback
+    }],
+}
+</code></pre>
+</div>
+
+<p class="fragment (appear)" data-fragment-index="3">
+<img style="margin: calc(-16px) calc(-5px)" src="./index_files/christmas_tree.gif" alt="🎄">
+tree-shaking is for compiler!
+</p>
+
+</section>
+<section id="slide-org95aba20" class="future" style="top: 0px; display: none;" data-index-h="5" data-index-v="4" hidden="" aria-hidden="true">
+<h3 id="org95aba20">take-away 🎁</h3>
+<p>
+linter will bring consistency in &lt;code&gt;
+</p>
+
+
+<div id="orgc96ec3b" class="figure">
+<p><img src="./index_files/captain-you.jpg" alt="captain-you.jpg" height="300px">
+</p>
+</div>
+
+<p>
+rest still lies on you
+</p>
+
+</section>
+<section id="slide-orgafbf5d3" class="future" style="top: 0px; display: none;" data-index-h="5" data-index-v="5" aria-hidden="true" hidden="">
+<h3 id="orgafbf5d3">references</h3>
+<form><ul>
+<li><a href="https://eslint.org/docs/latest/rules/max-len">https://eslint.org/docs/latest/rules/max-len</a></li>
+<li><a href="https://eslint.org/docs/latest/rules/max-lines">https://eslint.org/docs/latest/rules/max-lines</a></li>
+<li><a href="https://eslint.org/docs/latest/rules/indent">https://eslint.org/docs/latest/rules/indent</a></li>
+<li><a href="https://eslint.org/docs/latest/rules/max-depth">https://eslint.org/docs/latest/rules/max-depth</a></li>
+<li><a href="https://eslint.org/docs/latest/rules/brace-style">https://eslint.org/docs/latest/rules/brace-style</a></li>
+<li><a href="https://eslint.org/docs/latest/rules/no-unused-vars">https://eslint.org/docs/latest/rules/no-unused-vars</a></li>
+
+</ul></form>
+
+</section>
+</section>
+<section style="top: 0px; display: none;" class="stack future" data-previous-indexv="0" data-index-h="6" hidden="" aria-hidden="true">
+<section id="slide-org22c331f" style="top: 0px; display: none;" class="" data-index-h="6" data-index-v="0" aria-hidden="true">
+<h2 id="org22c331f">LET-IT-GO</h2>
+
+<div id="orgd7c6502" class="figure">
+<p><img src="./index_files/consistent.gif" alt="consistent.gif">
+</p>
+</div>
+
+</section>
+<section id="slide-orge58683e" class="future" style="top: 0px; display: none;" data-fragment="-1" data-index-h="6" data-index-v="1" hidden="" aria-hidden="true">
+<h3 id="orge58683e">file-level</h3>
+<div class="org-src-container">
+
+<pre><code class="js" data-line-numbers=|7>/* eslint no-fallthrough: error */
+/* eslint no-console: off */
+
+switch ('match') {
+    case 'match':
+        console.log('no break here 👇')
+        // break
+    case 'not a match':
+        console.log('should not be here')
+}
+</code></pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="code-wrapper"><code class="sh hljs bash">eslint no-fallthrough.js
+</code></pre>
+</div>
+
+<pre class="example">
+/path/to/file/no-fallthrough.js
+  7:5  error  Expected a 'break' statement before 'case'  no-fallthrough
+
+✖ 1 problem (1 error, 0 warnings)
+
+</pre>
+
+</section>
+<section id="slide-org33d5c98" class="future" style="top: 0px; display: none;" data-fragment="1" data-index-h="6" data-index-v="2" aria-hidden="true" hidden="">
+<h3 id="org33d5c98">line</h3>
+<div class="org-src-container">
+
+<pre><code class="js" data-line-numbers=|3|6>console.log('why this is in production')
+
+// eslint-disable-next-line no-console
+console.log('this is allowed')
+
+console.log('trialing noqa') // eslint-disable-line no-console
+</code></pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="code-wrapper"><code class="sh hljs bash">eslint no-console.js
+</code></pre>
+</div>
+
+<pre class="example">
+/path/to/file/no-console.js
+  1:1  error  Unexpected console statement  no-console
+  6:1  error  Unexpected console statement  no-console
+
+✖ 2 problems (2 errors, 0 warnings)
+
+</pre>
+
+</section>
+<section id="slide-org1934c70" class="future" style="top: 0px; display: none;" data-fragment="0" hidden="" aria-hidden="true" data-index-h="6" data-index-v="3">
+<h3 id="org1934c70">global</h3>
+<p>
+🌏 your have stuff
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="js" data-line-numbers=|5>function foo {
+    return 'module is expected to be'
+}
+
+/* global boo */
+function boo {
+    return 'setting global will stop pesky linter'
+}
+</code></pre>
+</div>
+
+</section>
+<section id="slide-orgd8a746b" class="future" style="top: 0px; display: none;" data-fragment="3" aria-hidden="true" data-index-h="6" data-index-v="4" hidden="">
+<h3 id="orgd8a746b">environments</h3>
+<div class="org-src-container">
+
+<pre><code class="js" data-line-numbers=|3|4|5|6>module.exports = {
+    env : { // just showing options
+        browser  : true,
+        node     : true,
+        commonjs : true,
+        es6      : true,
+    }
+}
+</code></pre>
+</div>
+
+</section>
+</section>
+<section style="top: 0px; display: none;" class="stack future" data-previous-indexv="0" data-index-h="7" hidden="" aria-hidden="true">
+<section id="slide-orge489921" style="top: 0px; display: none;" class="" data-index-h="7" data-index-v="0" aria-hidden="true">
+<h2 id="orge489921">FINALLY</h2>
+
+<div id="org511641b" class="figure">
+<p><img src="./index_files/wrech.gif" alt="wrech.gif">
+</p>
+</div>
+
+</section>
+<section id="slide-orgcf89493" class="future" style="top: 0px; display: none;" hidden="" aria-hidden="true" data-index-h="7" data-index-v="1">
+<h3 id="orgcf89493">limitation</h3>
+<form><ul>
+<li>there are lot of rules, hope you will find why.</li>
+<li>auto formatter doesn't solve everything</li>
+
+</ul></form>
+
+<p>
+<img src="./index_files/cowboy_hat_face.gif" alt="🤠">
+</p>
+
+</section>
+<section id="slide-org2f1b699" class="future" style="top: 0px; display: none;" data-index-h="7" data-index-v="2" aria-hidden="true" hidden="">
+<h3 id="org2f1b699">about me</h3>
+<p>
+One who didn't try JAVASCRIPT because didn't like
+<img style="margin: calc(-16px) calc(-5px)" src="./index_files/hot_beverage.gif" alt="☕">
+JAVA, 10 years later I'm giving this talk!
+</p>
+
+<p>
+<img src="./index_files/thinking_face.gif" alt="🤔">
+</p>
+
+<p>
+Do you have Questions ?
+</p>
+
+<table>
+
+
+<colgroup>
+<col class="org-left">
+
+<col class="org-left">
+
+<col class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://github.com/rhoit">github/rhoit</a></td>
+<td class="org-left"><a href="https://gitlab.com/rhoit">gitlab/rhoit</a></td>
+<td class="org-left"><a href="https://twitter.com/rhoitman">twitter/rhoitman</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</div>
+<div class="slide-number" style="display: block;"><a href="file:///home/rho/Documents/rhoit.com/rhoit.github.io/talks/2022-nepaljs/README.html#/slide-orge77f433">
+					<span class="slide-number-a">2</span>
+					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down enabled" aria-label="below slide"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0.03125);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">DAY-IN-DAY-OUT Looking at Juniors &lt;Code&gt;! </div><div class="backgrounds"><div class="slide-background past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background stack present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="slide-background stack future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="slide-background stack future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="slide-background stack future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="slide-background stack future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" data-background-hash="/home/rho/Public/assets/einstine.png300pxnullnullnullnullnullnullbottom leftnullnull" data-background-size="300px" style="display: none;" data-loaded="true"><div class="slide-background-content" style="background-size: 300px; background-position: left bottom; background-image: url(&quot;/home/rho/Public/assets/einstine.png&quot;);"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="slide-background stack future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="slide-background stack future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div></div></div></div>
+<script src="./index_files/reveal.js"></script>
+<script src="./index_files/highlight.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+
+transition: 'convex',
+transitionSpeed: 'default',
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealHighlight ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+});
+</script>
+
+
+</body></html>
